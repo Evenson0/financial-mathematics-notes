@@ -1,6 +1,0 @@
----
-title: "FINANCIAL MATHEMATICS"
-author: "Evenson Auguste"
-date: "2026-01-15"
-output: github_document
----
