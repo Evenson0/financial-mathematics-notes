@@ -21,8 +21,6 @@ financial-mathematics-notes/
 │
 ├── data/
 │   └── fm_practice_problems.json
-│
-└── LICENSE
 ```
 
 ## PDF Notes
@@ -151,7 +149,3 @@ You can find more actuarial, mathematical, and quantitative finance resources on
 **Evenson Auguste**
 
 Actuarial analyst interested in actuarial science, financial mathematics, quantitative finance, probability, and mathematical education.
-
-## License
-
-This project is released for educational purposes. See the `LICENSE` file for details.
