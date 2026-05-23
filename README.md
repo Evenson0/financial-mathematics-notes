@@ -41,7 +41,9 @@ The notes include:
 
 The exercises are also connected to an interactive practice tool on my website:
 
-[Open the FM Practice Tool](https://evenson0.github.io/tools/soa-fm-practice/)
+<a href="https://evenson0.github.io/tools/soa-fm-practice/" target="_blank" rel="noopener noreferrer">
+  Open the FM Practice Tool
+</a>
 
 The tool is designed for active preparation. It allows users to work through FM-style exercises, select answers, and review structured solutions.
 
