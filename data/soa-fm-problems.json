@@ -1,0 +1,2386 @@
+[
+  {
+    "id": 1,
+    "topic": "simple interest",
+    "title": "Exercise 1",
+    "statement": "You are given an accumulation function \\( a(t) = 1 + 0.1t \\). An amount of \\( 1000 \\) is invested at time \\( 0 \\). Determine the amount of interest earned during year \\( 8 \\).",
+    "choices": [
+      "\\( 80 \\)",
+      "\\( 90 \\)",
+      "\\( 100 \\)",
+      "\\( 110 \\)"
+    ],
+    "correct": 2,
+    "solution_steps": [
+      "Since \\( A(t) = 1000\\,a(t) \\), we have \\( A(t) = 1000(1 + 0.1t) \\).",
+      "Compute \\( A(8) = 1000(1 + 0.1 \\cdot 8) = 1000(1.8) = 1800 \\).",
+      "Compute \\( A(7) = 1000(1 + 0.1 \\cdot 7) = 1000(1.7) = 1700 \\).",
+      "The interest earned during year \\( 8 \\) is \\( I_8 = A(8) - A(7) = 1800 - 1700 = 100 \\)."
+    ],
+    "generalization": "For year \\( n \\), the interest earned is \\( I_n = A(n) - A(n-1) = 1000(1 + 0.1n) - 1000(1 + 0.1(n-1)) = 100 \\).",
+    "answer_text": "The amount of interest earned during year \\( 8 \\) is \\( 100 \\)."
+  },
+  {
+    "id": 2,
+    "topic": "accumulation functions",
+    "title": "Exercise 2",
+    "statement": "You are given an accumulation function \\( a(t) = bt^2 + c \\). A deposit of \\( 100 \\) at time \\( 0 \\) is worth \\( 200 \\) at time \\( 10 \\). Find the accumulated value at time \\( 15 \\) of \\( 500 \\) invested at time \\( 0 \\).",
+    "choices": [
+      "\\( 1125 \\)",
+      "\\( 1375 \\)",
+      "\\( 1625 \\)",
+      "\\( 2000 \\)"
+    ],
+    "correct": 2,
+    "solution_steps": [
+      "Since \\( A(t) = 100\\,a(t) \\) for the initial deposit of \\(100\\), the condition at time \\(10\\) gives \\( 100a(10) = 200 \\), so \\( a(10) = 2 \\).",
+      "Also, by definition of an accumulation function, \\( a(0) = 1 \\).",
+      "From \\( a(t) = bt^2 + c \\), we get \\( a(0) = c = 1 \\).",
+      "Using \\( a(10) = 2 \\), we obtain \\( 100b + 1 = 2 \\), hence \\( b = 0.01 \\).",
+      "Therefore, \\( a(15) = 0.01(15^2) + 1 = 0.01(225) + 1 = 3.25 \\).",
+      "The accumulated value at time \\(15\\) of \\(500\\) invested at time \\(0\\) is \\( 500a(15) = 500(3.25) = 1625 \\)."
+    ],
+    "generalization": "Once the accumulation function \\( a(t) \\) is identified, the accumulated value at time \\( t \\) of an amount \\( P \\) invested at time \\( 0 \\) is \\( P\\,a(t) \\).",
+    "answer_text": "The accumulated value at time \\( 15 \\) is \\( \\boxed{1625} \\)."
+  },
+  {
+  "id": 3,
+  "topic": "effective rates",
+  "title": "Exercise 3",
+  "statement": "An investment of \\( 1000 \\) is made into a fund at time \\( t = 0 \\). The fund develops the following balances over the next four years: \\[ \\begin{array}{c|ccccc} t & 0 & 1 & 2 & 3 & 4 \\\\ \\hline A(t) & 1000 & 1060 & 1113 & 1146 & 1181 \\end{array} \\] Find \\( i_1 \\) and \\( i_3 \\), the effective rates of interest for years one and three respectively.",
+  "choices": [
+    "\\( i_1 = 5\\%,\\ i_3 = 3.00\\% \\)",
+    "\\( i_1 = 6\\%,\\ i_3 = 2.96\\% \\)",
+    "\\( i_1 = 6\\%,\\ i_3 = 3.13\\% \\)",
+    "\\( i_1 = 6.3\\%,\\ i_3 = 2.96\\% \\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The effective rate of interest for year \\( n \\) is given by \\( i_n = \\dfrac{A(n)-A(n-1)}{A(n-1)} \\).",
+    "For year one, \\( i_1 = \\dfrac{1060 - 1000}{1000} = \\dfrac{60}{1000} = 0.06 = 6\\% \\).",
+    "For year three, \\( i_3 = \\dfrac{1146 - 1113}{1113} = \\dfrac{33}{1113} \\approx 0.02965 \\).",
+    "Thus, \\( i_3 \\approx 2.96\\% \\)."
+  ],
+  "generalization": "If the accumulated values \\( A(0), A(1), \\dots \\) are known, then the effective rate for year \\( n \\) is \\( i_n = \\dfrac{A(n)-A(n-1)}{A(n-1)} \\).",
+  "answer_text": "The effective rates are \\( i_1 = 6\\% \\) and \\( i_3 \\approx 2.96\\% \\)."
+},
+{
+  "id": 4,
+  "topic": "effective rates",
+  "title": "Exercise 4",
+  "statement": "Gertrude deposits \\( 10{,}000 \\) in a bank. During the first year, the bank credits an annual effective rate of interest \\( i \\). During the second year, the bank credits an annual effective rate of interest \\( i - 5\\% \\). At the end of two years, she has \\( 12{,}093.75 \\) in the bank.\n\nWhat would Gertrude have in the bank at the end of three years, if the annual effective rate of interest were \\( i + 9\\% \\) for each of the three years?",
+  "choices": [
+    "\\( 16{,}942.41 \\)",
+    "\\( 17{,}942.41 \\)",
+    "\\( 18{,}209.38 \\)",
+    "\\( 19{,}102.50 \\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Set up the two-year accumulation equation: \\( 10000(1+i)(1+i-0.05)=12093.75 \\).",
+    "Divide by \\( 10000 \\): \\( (1+i)(0.95+i)=1.209375 \\).",
+    "Expand to get \\( i^2 + 1.95i + 0.95 = 1.209375 \\), so \\( i^2 + 1.95i - 0.259375 = 0 \\).",
+    "Solve the quadratic equation. The valid solution is \\( i = 0.125 = 12.5\\% \\).",
+    "The new annual effective rate for each of the three years is \\( i+9\\% = 12.5\\%+9\\% = 21.5\\% \\).",
+    "Accumulate for three years: \\( 10000(1.215)^3 = 17942.40875 \\).",
+    "Therefore, the amount in the bank at the end of three years is \\( \\boxed{17{,}942.41} \\)."
+  ],
+  "generalization": "When annual effective rates vary by year, accumulate by multiplying one annual factor for each year. If rates are linked algebraically, first solve for the unknown rate, then apply the required accumulation factors.",
+  "answer_text": "The amount in the bank at the end of three years is \\( \\boxed{17{,}942.41} \\)."
+},
+{
+  "id": 5,
+  "topic": "effective discount",
+  "title": "Exercise 5",
+  "statement": "A deposit of \\( X \\) is made into a fund which pays an annual effective interest rate of \\( 6\\% \\) for \\( 10 \\) years.\n\nAt the same time, \\( X/2 \\) is deposited into another fund which pays an annual effective rate of discount \\( d \\) for \\( 10 \\) years.\n\nThe amounts of interest earned over the \\( 10 \\) years are equal for both funds.\n\nCalculate \\( d \\).",
+  "choices": [
+    "\\( 5.66\\% \\)",
+    "\\( 7.42\\% \\)",
+    "\\( 9.05\\% \\)",
+    "\\( 10.31\\% \\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The accumulated value of the first fund after 10 years is \\( X(1.06)^{10} \\), so the interest earned is \\( X\\big((1.06)^{10}-1\\big) \\).",
+    "For an annual effective discount rate \\( d \\), the annual accumulation factor is \\( \\dfrac{1}{1-d} \\).",
+    "Thus the accumulated value of the second fund after 10 years is \\( \\dfrac{X}{2}\\left(\\dfrac{1}{1-d}\\right)^{10} \\), so the interest earned is \\( \\dfrac{X}{2}\\left[\\left(\\dfrac{1}{1-d}\\right)^{10}-1\\right] \\).",
+    "Set the interests equal: \\( X\\big((1.06)^{10}-1\\big)=\\dfrac{X}{2}\\left[\\left(\\dfrac{1}{1-d}\\right)^{10}-1\\right] \\).",
+    "Cancel \\( X \\) and multiply by 2: \\( 2\\big((1.06)^{10}-1\\big)=\\left(\\dfrac{1}{1-d}\\right)^{10}-1 \\).",
+    "So \\( \\left(\\dfrac{1}{1-d}\\right)^{10}=2(1.06)^{10}-1 \\approx 2.5816954 \\).",
+    "Take the 10th root: \\( \\dfrac{1}{1-d} \\approx (2.5816954)^{1/10} \\approx 1.09945 \\).",
+    "Hence \\( 1-d \\approx 0.90951 \\), so \\( d \\approx 0.09049 = 9.05\\% \\)."
+  ],
+  "generalization": "For an annual effective discount rate \\( d \\), the annual accumulation factor is \\( \\dfrac{1}{1-d} \\). When comparing interest earned on two funds, write each interest amount as accumulated value minus principal, then solve the resulting equation.",
+  "answer_text": "The annual effective discount rate is \\( \\boxed{9.05\\%} \\)."
+},
+{
+  "id": 6,
+  "topic": "present value",
+  "title": "Exercise 6",
+  "statement": "[SOA 16; SOA-IT.020] David can receive one of the following two payment streams:\n\ni. \\( 100 \\) at time \\( 0 \\), \\( 200 \\) at time \\( n \\) years, and \\( 300 \\) at time \\( 2n \\) years\n\nii. \\( 600 \\) at time \\( 10 \\) years\n\nAt an annual effective interest rate of \\( i \\), the present values of the two streams are equal.\n\nGiven \\( v^n = 0.76 \\), calculate \\( i \\).",
+  "choices": [
+    "\\( 2.80\\% \\)",
+    "\\( 3.50\\% \\)",
+    "\\( 4.16\\% \\)",
+    "\\( 5.02\\% \\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Write the present value equation: \\( 100 + 200v^n + 300v^{2n} = 600v^{10} \\).",
+    "Since \\( v^n = 0.76 \\), we have \\( v^{2n} = (0.76)^2 = 0.5776 \\).",
+    "Substitute into the left-hand side: \\( 100 + 200(0.76) + 300(0.5776) = 100 + 152 + 173.28 = 425.28 \\).",
+    "Therefore \\( 600v^{10} = 425.28 \\), so \\( v^{10} = \\dfrac{425.28}{600} = 0.7088 \\).",
+    "Using \\( v = \\dfrac{1}{1+i} \\), we get \\( v^{10} = (1+i)^{-10} \\).",
+    "Thus \\( (1+i)^{-10} = 0.7088 \\), so \\( 1+i = (0.7088)^{-1/10} \\).",
+    "Hence \\( i = (0.7088)^{-1/10} - 1 \\approx 0.03502 \\).",
+    "Therefore, \\( i \\approx 3.50\\% \\)."
+  ],
+  "generalization": "When \\( v^n \\) is known, higher powers such as \\( v^{2n} \\) can be obtained directly. Then reduce the present value equation to a single equation in \\( v^m \\), and finally solve for \\( i \\) using \\( v = \\dfrac{1}{1+i} \\).",
+  "answer_text": "The annual effective interest rate is \\( \\boxed{3.50\\%} \\)."
+},
+  {
+  "id": 7,
+  "topic": "effective interest rate",
+  "title": "Exercise 7",
+  "statement": "Sam invested \\( \\$500 \\) in a bank. After two years, the fund increased to \\( \\$561.80 \\). What was the annual effective interest rate offered by the bank?",
+  "choices": [
+    "\\( 4\\% \\)",
+    "\\( 5\\% \\)",
+    "\\( 6\\% \\)",
+    "\\( 7\\% \\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The initial amount is \\( A(0)=500 \\), and the accumulated amount after two years is \\( A(2)=561.80 \\).",
+    "Using the constant effective interest rate formula, \\( A(t)=A(0)(1+i)^t \\).",
+    "Substitute the known values: \\( 561.80 = 500(1+i)^2 \\).",
+    "Divide both sides by \\( 500 \\): \\( (1+i)^2 = 1.1236 \\).",
+    "Take the square root: \\( 1+i = \\sqrt{1.1236} \\).",
+    "Thus, \\( i = \\sqrt{1.1236}-1 = 0.06 \\)."
+  ],
+  "generalization": "When an amount \\( A(0) \\) accumulates to \\( A(t) \\) over \\( t \\) years at a constant annual effective interest rate \\( i \\), use \\( A(t)=A(0)(1+i)^t \\), so \\( i = \\left(\\dfrac{A(t)}{A(0)}\\right)^{1/t}-1 \\).",
+  "answer_text": "The annual effective interest rate was \\( \\boxed{6\\%} \\)."
+},
+  {
+  "id": 8,
+  "topic": "compound interest",
+  "title": "Exercise 8",
+  "statement": "Beth invests \\( \\$300 \\) in a fund earning a \\( 1\\% \\) monthly effective interest rate. How much is in her fund at the end of eight months?",
+  "choices": [
+    "\\( \\$318.00 \\)",
+    "\\( \\$321.37 \\)",
+    "\\( \\$324.86 \\)",
+    "\\( \\$326.40 \\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the interest rate is given as a monthly effective interest rate, define \\( t \\) in terms of months.",
+    "The initial investment is \\( A(0)=300 \\), the monthly effective interest rate is \\( i=0.01 \\), and the time is \\( t=8 \\).",
+    "Use the accumulation formula \\( A(t)=A(0)(1+i)^t \\).",
+    "Thus, \\( A(8)=300(1.01)^8 \\).",
+    "Compute \\( 300(1.01)^8 \\approx 324.8570 \\)."
+  ],
+  "generalization": "When the effective interest rate is given per period, measure \\( t \\) in that same period. For a monthly effective interest rate, \\( t \\) should be measured in months.",
+  "answer_text": "Beth has \\( \\boxed{\\$324.86} \\) at the end of eight months."
+},
+{
+  "id": 9,
+  "topic": "compound interest",
+  "title": "Exercise 9",
+  "statement": "James invests \\( \\$100 \\) in a bank. The fund earns an annual effective interest rate of \\( 10\\% \\). Calculate the fund accumulation at the end of six months.",
+  "choices": [
+    "\\( \\$104.88 \\)",
+    "\\( \\$105.00 \\)",
+    "\\( \\$105.10 \\)",
+    "\\( \\$110.00 \\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "The interest rate is an annual effective interest rate, so define \\( t \\) in terms of years.",
+    "Six months is half a year, so \\( t=0.5 \\).",
+    "The initial investment is \\( A(0)=100 \\), and the annual effective interest rate is \\( i=0.10 \\).",
+    "Use the accumulation formula \\( A(t)=A(0)(1+i)^t \\).",
+    "Thus, \\( A(0.5)=100(1.10)^{1/2} \\).",
+    "Compute \\( 100(1.10)^{1/2} \\approx 104.88 \\)."
+  ],
+  "generalization": "When an annual effective interest rate is used for a fraction of a year, the exponent is the fraction of the year. For six months, use \\( t=\\frac{1}{2} \\).",
+  "answer_text": "The fund accumulation is \\( \\boxed{\\$104.88} \\) at the end of six months."
+},
+{
+  "id": 10,
+  "topic": "present value",
+  "title": "Exercise 10",
+  "statement": "Toby wants to have \\( \\$500 \\) in one year. How much does he need to invest today if the account credits a \\( 7\\% \\) annual effective interest rate?",
+  "choices": [
+    "\\( \\$450.00 \\)",
+    "\\( \\$462.50 \\)",
+    "\\( \\$467.29 \\)",
+    "\\( \\$475.00 \\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "We are not given the initial investment. Instead, we are given the amount at the end of one year.",
+    "The desired accumulated value is \\( A(1)=500 \\), and the annual effective interest rate is \\( i=0.07 \\).",
+    "Use the formula \\( A(1)=A(0)(1+i) \\).",
+    "Substitute the known values: \\( 500=A(0)(1.07) \\).",
+    "Solve for \\( A(0) \\): \\( A(0)=\\dfrac{500}{1.07} \\).",
+    "Compute \\( \\dfrac{500}{1.07} \\approx 467.2897 \\)."
+  ],
+  "generalization": "To find the amount that must be invested today to reach a future value, discount the future value back to the present. With annual effective interest rate \\( i \\), the present value of \\( A(t) \\) due in \\( t \\) years is \\( A(0)=\\dfrac{A(t)}{(1+i)^t} \\).",
+  "answer_text": "Toby needs to invest \\( \\boxed{\\$467.29} \\) today."
+},
+  {
+  "id": 11,
+  "topic": "present value and accumulated value",
+  "title": "Exercise 11",
+  "statement": "Fund A is invested at an annual effective interest rate of \\(3\\%\\). Fund B is invested at an annual effective interest rate of \\(2.5\\%\\). At the end of \\(20\\) years, the total in the two funds is \\(10{,}000\\). At the end of \\(31\\) years, the amount in Fund A is twice the amount in Fund B. Calculate the total in the two funds at the end of \\(10\\) years.",
+  "choices": [
+    "\\(7{,}426.83\\)",
+    "\\(7{,}569.07\\)",
+    "\\(7{,}815.64\\)",
+    "\\(8{,}000.00\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(A\\) and \\(B\\) be the amounts initially invested in Fund A and Fund B, respectively.",
+    "At the end of \\(20\\) years, the total in the two funds is \\(10{,}000\\), so \\(A(1.03)^{20}+B(1.025)^{20}=10{,}000\\).",
+    "At the end of \\(31\\) years, the amount in Fund A is twice the amount in Fund B, so \\(A(1.03)^{31}=2B(1.025)^{31}\\).",
+    "From \\(A(1.03)^{31}=2B(1.025)^{31}\\), solve for \\(A\\): \\(A=\\dfrac{2B(1.025)^{31}}{(1.03)^{31}}\\).",
+    "Substitute this expression for \\(A\\) into the equation at time \\(20\\): \\(\\dfrac{2B(1.025)^{31}}{(1.03)^{31}}(1.03)^{20}+B(1.025)^{20}=10{,}000\\).",
+    "Factor out \\(B\\): \\(B\\left[2\\left(\\dfrac{1.025^{31}}{1.03^{11}}\\right)+1.025^{20}\\right]=10{,}000\\).",
+    "Solving gives \\(B=2{,}107.4648\\).",
+    "Then \\(A=\\dfrac{2B(1.025)^{31}}{1.03^{31}}=3{,}624.7344\\).",
+    "The total of the two funds at the end of \\(10\\) years is \\(A(1.03)^{10}+B(1.025)^{10}\\).",
+    "Therefore, \\(A(1.03)^{10}+B(1.025)^{10}=7{,}569.07\\)."
+  ],
+  "generalization": "When two funds accumulate at different effective interest rates, write equations at the time points given in the problem. Solve for the initial deposits, then accumulate or discount to the required time.",
+  "answer_text": "The total in the two funds at the end of \\(10\\) years is \\(\\boxed{7{,}569.07}\\)."
+},
+  {
+  "id": 12,
+  "topic": "present value and accumulated value",
+  "title": "Exercise 12",
+  "statement": "Bob invests \\(X\\) in an account that pays interest at an annual effective rate of \\(8\\%\\). Ten years later, he withdraws \\(X\\). Ten years after that, he withdraws \\(1{,}000\\), which exhausts the account. Calculate \\(X\\).",
+  "choices": [
+    "\\(399.68\\)",
+    "\\(463.19\\)",
+    "\\(500.00\\)",
+    "\\(680.58\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "Accumulate all cash flows to time \\(20\\).",
+    "The initial deposit \\(X\\) accumulates for \\(20\\) years, so its accumulated value at time \\(20\\) is \\(X(1.08)^{20}\\).",
+    "The withdrawal of \\(X\\) at time \\(10\\) accumulates for \\(10\\) years to time \\(20\\), so its accumulated value at time \\(20\\) is \\(X(1.08)^{10}\\).",
+    "Since the final withdrawal of \\(1{,}000\\) exhausts the account at time \\(20\\), we have \\(X(1.08)^{20}-X(1.08)^{10}=1{,}000\\).",
+    "Factor out \\(X\\): \\(X\\left[(1.08)^{20}-(1.08)^{10}\\right]=1{,}000\\).",
+    "Solve for \\(X\\): \\(X=\\dfrac{1{,}000}{(1.08)^{20}-(1.08)^{10}}\\).",
+    "Therefore, \\(X=399.6751\\)."
+  ],
+  "generalization": "When several cash flows occur at different times, choose one comparison date and move every cash flow to that date using the appropriate accumulation or discount factor. Then set the value of inflows equal to the value of outflows.",
+  "answer_text": "Bob invested \\(\\boxed{399.68}\\)."
+},
+  {
+  "id": 13,
+  "topic": "effective rate of discount",
+  "title": "Example 1.1.6",
+  "statement": "Sam invests \\(200\\) in a bank. The fund earns an annual effective rate of discount of \\(9.0909\\%\\). What will the fund value be at the end of five years?",
+  "choices": [],
+  "correct": null,
+  "solution_steps": [
+    "Define \\(t\\) in terms of years.",
+    "We have \\(A(0)=200\\), \\(d=9.0909\\%\\), and \\(t=5\\).",
+    "Since \\((1-d)^{-1}\\) is the one-period accumulation factor associated with an effective discount rate, the accumulated value after five years is \\(A(5)=200(1-0.090909)^{-5}\\).",
+    "Therefore, \\(A(5)=322.1018\\)."
+  ],
+  "generalization": "When an effective discount rate \\(d\\) is used to accumulate a value forward in time, use the accumulation factor \\((1-d)^{-1}\\) for each period. Over \\(t\\) periods, the accumulated value is \\(A(t)=A(0)(1-d)^{-t}\\).",
+  "answer_text": "The fund accumulates to \\(\\boxed{322.10}\\) at the end of five years."
+},
+  {
+  "id": 14,
+  "topic": "effective rate of discount",
+  "title": "Example 1.1.7",
+  "statement": "Fund A offers a monthly effective discount rate of \\(1\\%\\). Jack deposited \\(350\\) into Fund A four years ago. Now, he withdraws all his funds. How much does he withdraw?",
+  "choices": [],
+  "correct": null,
+  "solution_steps": [
+    "Use \\(t\\) in terms of months.",
+    "Since there are \\(12\\) months in a year, four years correspond to \\(48\\) months.",
+    "We have \\(A(0)=350\\), \\(d=1\\%\\), and \\(t=48\\).",
+    "Since \\((1-d)^{-1}\\) is the one-period accumulation factor associated with an effective discount rate, the accumulated value after \\(48\\) months is \\(A(48)=350(1-0.01)^{-48}\\).",
+    "Therefore, \\(A(48)=566.9943\\)."
+  ],
+  "generalization": "When the discount rate is effective per month, the time period must be measured in months. If money is invested for \\(n\\) months at a monthly effective discount rate \\(d\\), the accumulated value is \\(A(n)=A(0)(1-d)^{-n}\\).",
+  "answer_text": "Jack withdraws \\(\\boxed{566.99}\\) from the fund."
+},
+  {
+  "id": 15,
+  "topic": "effective rate of discount",
+  "title": "Example 1.1.7",
+  "statement": "Given an \\(8\\%\\) annual effective interest rate, calculate the equivalent annual effective discount rate, \\(d\\), and the discount factor, \\(v\\).",
+  "choices": [],
+  "correct": null,
+  "solution_steps": [
+    "The effective interest rate is \\(8\\%\\). Thus, \\(i=0.08\\).",
+    "Recall that the effective discount rate is \\(d=\\dfrac{i}{1+i}\\).",
+    "Substitute \\(i=0.08\\): \\(d=\\dfrac{0.08}{1.08}=0.07407\\).",
+    "Recall that the discount factor is \\(v=\\dfrac{1}{1+i}\\).",
+    "Substitute \\(i=0.08\\): \\(v=\\dfrac{1}{1.08}=0.9259\\)."
+  ],
+  "generalization": "Given an effective interest rate \\(i\\), the equivalent effective discount rate is \\(d=\\dfrac{i}{1+i}\\), and the discount factor is \\(v=\\dfrac{1}{1+i}\\).",
+  "answer_text": "The equivalent annual effective discount rate is \\(\\boxed{7.407\\%}\\), and the discount factor is \\(\\boxed{0.9259}\\)."
+},
+  {
+  "id": 16,
+  "topic": "effective rate of discount",
+  "title": "Exercise 16",
+  "statement": "A deposit of \\(X\\) is made into a fund which pays an annual effective interest rate of \\(6\\%\\) for \\(10\\) years. At the same time, \\(\\dfrac{X}{2}\\) is deposited into another fund which pays an annual effective rate of discount of \\(d\\) for \\(10\\) years. The amounts of interest earned over the \\(10\\) years are equal for both funds. Calculate \\(d\\).",
+  "choices": [],
+  "correct": null,
+  "solution_steps": [
+    "The amount of interest earned is the difference between the initial amount and the amount at the end of \\(10\\) years.",
+    "For the first fund, the accumulated value after \\(10\\) years is \\(X(1.06)^{10}\\). Therefore, the interest earned is \\(X(1.06)^{10}-X\\).",
+    "For the second fund, the annual effective rate of discount is \\(d\\), so the accumulation factor over \\(10\\) years is \\((1-d)^{-10}\\).",
+    "The accumulated value of the second fund after \\(10\\) years is \\(\\dfrac{X}{2}(1-d)^{-10}\\). Therefore, the interest earned is \\(\\dfrac{X}{2}(1-d)^{-10}-\\dfrac{X}{2}\\).",
+    "Since the amounts of interest earned are equal, \\(X(1.06)^{10}-X=\\dfrac{X}{2}(1-d)^{-10}-\\dfrac{X}{2}\\).",
+    "Divide both sides by \\(X\\): \\(1.06^{10}-1=\\dfrac{(1-d)^{-10}}{2}-\\dfrac{1}{2}\\).",
+    "Rearranging gives \\((1-d)^{-10}=2.581695\\).",
+    "Therefore, \\(1-d=(2.581695)^{-1/10}\\).",
+    "Hence, \\(d=1-(2.581695)^{-1/10}=0.09049\\)."
+  ],
+  "generalization": "When comparing interest earned by two funds, compute interest as accumulated value minus initial deposit for each fund. If one fund uses an effective discount rate \\(d\\), remember that its accumulation factor over \\(n\\) periods is \\((1-d)^{-n}\\).",
+  "answer_text": "The annual effective rate of discount is \\(\\boxed{9.049\\%}\\)."
+},
+  {
+  "id": 17,
+  "topic": "effective interest rate",
+  "title": "Exercise 17",
+  "statement": "Given \\(A(t)=10(1.08)^t\\), find \\(i_3\\) and \\(i_7\\).",
+  "choices": [
+    "\\(i_3=6\\%,\\ i_7=6\\%\\)",
+    "\\(i_3=8\\%,\\ i_7=8\\%\\)",
+    "\\(i_3=8\\%,\\ i_7=7\\%\\)",
+    "\\(i_3=10\\%,\\ i_7=10\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The effective rate of interest for year \\(3\\) is \\(i_3=\\dfrac{A(3)-A(2)}{A(2)}\\).",
+    "Using \\(A(t)=10(1.08)^t\\), we get \\(i_3=\\dfrac{10(1.08)^3-10(1.08)^2}{10(1.08)^2}\\).",
+    "Factor \\(10(1.08)^2\\) from the numerator: \\(i_3=\\dfrac{10(1.08)^2[(1.08)-1]}{10(1.08)^2}\\).",
+    "Therefore, \\(i_3=1.08-1=0.08=8\\%\\).",
+    "The effective rate of interest for year \\(7\\) is \\(i_7=\\dfrac{A(7)-A(6)}{A(6)}\\).",
+    "Using \\(A(t)=10(1.08)^t\\), we get \\(i_7=\\dfrac{10(1.08)^7-10(1.08)^6}{10(1.08)^6}\\).",
+    "Factor \\(10(1.08)^6\\) from the numerator: \\(i_7=\\dfrac{10(1.08)^6[(1.08)-1]}{10(1.08)^6}\\).",
+    "Therefore, \\(i_7=1.08-1=0.08=8\\%\\).",
+    "More generally, for year \\(n\\), \\(i_n=\\dfrac{A(n)-A(n-1)}{A(n-1)}\\).",
+    "Since \\(A(t)=10(1.08)^t\\), we have \\(i_n=\\dfrac{10(1.08)^n-10(1.08)^{n-1}}{10(1.08)^{n-1}}=1.08-1=0.08\\)."
+  ],
+  "generalization": "An amount function of the form \\(A(t)=C(1+i)^t\\) represents compound interest with a constant effective interest rate \\(i\\) each period. This is the interest assumption used in almost every FM problem.",
+  "answer_text": "The effective rates are \\(\\boxed{i_3=i_7=8\\%}\\)."
+},
+  {
+  "id": 18,
+  "topic": "interest accumulation",
+  "title": "Exercise 18",
+  "statement": "An investment of \\(1{,}000\\) is made into a fund at time \\(t=0\\). The fund develops the following balances over the next \\(4\\) years: \\[ \\begin{array}{c|ccccc} t & 0 & 1 & 2 & 3 & 4 \\\\ \\hline A(t) & 1{,}000 & 1{,}060 & 1{,}113 & 1{,}146 & 1{,}181 \\end{array} \\] If \\(5{,}000\\) is invested in the same fund at time \\(1\\), find the amount of interest earned on this deposit between time \\(2\\) and time \\(3\\).",
+  "choices": [
+    "\\(150.00\\)",
+    "\\(155.66\\)",
+    "\\(165.00\\)",
+    "\\(180.19\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Since the new deposit is made into the same fund at time \\(1\\), its value at later times grows in proportion to the original fund values after time \\(1\\).",
+    "Let \\(A^*(t)\\) be the accumulated value at time \\(t\\) of the \\(5{,}000\\) deposited at time \\(1\\).",
+    "At time \\(2\\), \\(A^*(2)=5{,}000\\dfrac{A(2)}{A(1)}\\).",
+    "Thus, \\(A^*(2)=5{,}000\\dfrac{1{,}113}{1{,}060}=5{,}250\\).",
+    "At time \\(3\\), \\(A^*(3)=5{,}000\\dfrac{A(3)}{A(1)}\\).",
+    "Thus, \\(A^*(3)=5{,}000\\dfrac{1{,}146}{1{,}060}=5{,}405.66\\).",
+    "The interest earned between time \\(2\\) and time \\(3\\) is \\(I_3^*=A^*(3)-A^*(2)\\).",
+    "Therefore, \\(I_3^*=5{,}405.66-5{,}250=155.66\\)."
+  ],
+  "generalization": "If a deposit is made into a fund at time \\(k\\), and the fund has amount function values \\(A(t)\\), then the accumulated value at time \\(t\\ge k\\) of a deposit \\(P\\) made at time \\(k\\) is \\(P\\dfrac{A(t)}{A(k)}\\).",
+  "answer_text": "The amount of interest earned between time \\(2\\) and time \\(3\\) is \\(\\boxed{155.66}\\)."
+},
+  {
+  "id": 19,
+  "topic": "effective interest rate",
+  "title": "Exercise 19",
+  "statement": "You are given the accumulation function \\(a(t)=2t^2+3t+1\\). Determine \\(i_9\\), the effective interest rate during the ninth year.",
+  "choices": [
+    "\\(18.42\\%\\)",
+    "\\(24.18\\%\\)",
+    "\\(37.00\\%\\)",
+    "\\(41.18\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The ninth year is the period from time \\(8\\) to time \\(9\\).",
+    "The effective interest rate during year \\(9\\) is \\(i_9=\\dfrac{a(9)-a(8)}{a(8)}\\).",
+    "Compute \\(a(8)=2(8)^2+3(8)+1=128+24+1=153\\).",
+    "Compute \\(a(9)=2(9)^2+3(9)+1=162+27+1=190\\).",
+    "Substitute these values: \\(i_9=\\dfrac{190-153}{153}\\).",
+    "Thus, \\(i_9=\\dfrac{37}{153}=0.24183\\)."
+  ],
+  "generalization": "For an accumulation function \\(a(t)\\), the effective interest rate during year \\(n\\) is \\(i_n=\\dfrac{a(n)-a(n-1)}{a(n-1)}\\).",
+  "answer_text": "The effective interest rate during the ninth year is \\(\\boxed{24.18\\%}\\)."
+},
+  {
+  "id": 20,
+  "topic": "effective interest rate",
+  "title": "Exercise 20",
+  "statement": "Gertrude deposits \\(10{,}000\\) in a bank. During the first year, the bank credits an annual effective rate of interest \\(i\\). During the second year, the bank credits an annual effective rate of interest \\(i-5\\%\\). At the end of two years, she has \\(12{,}093.75\\) in the bank. What would Gertrude have in the bank at the end of three years, if the annual effective rate of interest were \\(i+9\\%\\) for each of the three years?",
+  "choices": [
+    "\\(17{,}250.00\\)",
+    "\\(17{,}936.13\\)",
+    "\\(17{,}942.41\\)",
+    "\\(18{,}209.38\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Set up the two-year accumulation equation: \\(10{,}000(1+i)(1+i-0.05)=12{,}093.75\\).",
+    "Rewrite the second factor: \\(10{,}000(1+i)(0.95+i)=12{,}093.75\\).",
+    "Expand: \\(10{,}000(0.95+1.95i+i^2)=12{,}093.75\\).",
+    "Move all terms to one side: \\(10{,}000i^2+19{,}500i-2{,}593.75=0\\).",
+    "Using the quadratic formula, \\(i=\\dfrac{-19{,}500 \\pm \\sqrt{19{,}500^2-4(10{,}000)(-2{,}593.75)}}{2(10{,}000)}\\).",
+    "The positive solution is \\(i=0.125\\).",
+    "The new annual effective rate is \\(i+9\\%=0.125+0.09=0.215\\).",
+    "Accumulate \\(10{,}000\\) for three years at \\(21.5\\%\\): \\(10{,}000(1.215)^3=17{,}936.13375\\)."
+  ],
+  "generalization": "When annual effective rates vary by year, multiply the corresponding annual accumulation factors. If the rates depend on an unknown parameter, first use the given accumulated value to solve for that parameter, then apply the required accumulation formula.",
+  "answer_text": "Gertrude would have \\(\\boxed{17{,}936.13}\\) in the bank at the end of three years."
+},
+  {
+  "id": 21,
+  "topic": "effective interest rate",
+  "title": "Exercise 21",
+  "statement": "[SOA 22; SOA-IT.027] Bruce and Robbie each open up new bank accounts at time \\(0\\). Bruce deposits \\(100\\) into his bank account, and Robbie deposits \\(50\\) into his. Each account earns the same annual effective interest rate. The amount of interest earned in Bruce's account during the \\(11\\)th year is equal to \\(X\\). The amount of interest earned in Robbie's account during the \\(17\\)th year is also equal to \\(X\\). Calculate \\(X\\).",
+  "choices": [
+    "\\(28.96\\)",
+    "\\(35.42\\)",
+    "\\(38.88\\)",
+    "\\(42.67\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The amount of interest earned in any account is the difference between its value at the end of a period and its value at the beginning of the period.",
+    "The amount of interest earned in Bruce's account during the \\(11\\)th year is \\(100(1+i)^{11}-100(1+i)^{10}=X\\).",
+    "The amount of interest earned in Robbie's account during the \\(17\\)th year is \\(50(1+i)^{17}-50(1+i)^{16}=X\\).",
+    "Set the two expressions equal: \\(100(1+i)^{11}-100(1+i)^{10}=50(1+i)^{17}-50(1+i)^{16}\\).",
+    "Factor both sides: \\(100(1+i)^{10}((1+i)-1)=50(1+i)^{16}((1+i)-1)\\).",
+    "This becomes \\(100(1+i)^{10}i=50(1+i)^{16}i\\).",
+    "Since the interest rate is positive, divide by \\(50(1+i)^{10}i\\) to get \\(2=(1+i)^6\\).",
+    "Thus, \\(1+i=2^{1/6}\\), so \\(i=2^{1/6}-1=0.122462\\).",
+    "Substitute into Bruce's interest equation: \\(X=100(1.122462)^{11}-100(1.122462)^{10}\\).",
+    "Therefore, \\(X=38.88\\)."
+  ],
+  "generalization": "The interest earned during year \\(n\\) is the accumulated value at time \\(n\\) minus the accumulated value at time \\(n-1\\). For a deposit \\(P\\) at annual effective interest rate \\(i\\), this interest is \\(P(1+i)^n-P(1+i)^{n-1}=P(1+i)^{n-1}i\\).",
+  "answer_text": "The amount of interest is \\(\\boxed{38.88}\\)."
+},
+  {
+  "id": 22,
+  "topic": "present value and discount rates",
+  "title": "Exercise 22",
+  "statement": "John can earn the following rates for the next five years: Year \\(1\\): effective rate of interest \\(=4\\%\\); Year \\(2\\): effective rate of discount \\(=5\\%\\); Year \\(3\\): effective rate of interest \\(=6\\%\\); Years \\(4\\) and \\(5\\): effective rate of discount \\(=10\\%\\). John needs to have \\(1{,}000\\) in \\(5\\) years. How much should he invest now?",
+  "choices": [
+    "\\(671.92\\)",
+    "\\(698.02\\)",
+    "\\(721.17\\)",
+    "\\(775.28\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "We need the present value at time \\(0\\) of \\(1{,}000\\) paid at time \\(5\\).",
+    "To move backward through a year with an effective interest rate \\(i\\), divide by \\(1+i\\).",
+    "To move backward through a year with an effective discount rate \\(d\\), multiply by \\(1-d\\).",
+    "Starting from time \\(5\\), the year \\(5\\) discount rate gives the factor \\(1-0.10=0.90\\).",
+    "The year \\(4\\) discount rate also gives the factor \\(1-0.10=0.90\\).",
+    "The year \\(3\\) interest rate gives the factor \\((1.06)^{-1}\\).",
+    "The year \\(2\\) discount rate gives the factor \\(1-0.05=0.95\\).",
+    "The year \\(1\\) interest rate gives the factor \\((1.04)^{-1}\\).",
+    "Therefore, \\(PV=1{,}000(0.90)(0.90)(1.06)^{-1}(0.95)(1.04)^{-1}\\).",
+    "Thus, \\(PV=698.02\\)."
+  ],
+  "generalization": "When moving backward in time, use \\((1+i)^{-1}\\) for an effective interest rate and \\(1-d\\) for an effective discount rate. Apply the factors year by year in reverse chronological order.",
+  "answer_text": "John should invest \\(\\boxed{698.02}\\) now."
+},
+  {
+  "id": 23,
+  "topic": "discount factor",
+  "title": "Exercise 23",
+  "statement": "Given \\(a(t)=1.08^t\\), find \\(v_5\\).",
+  "choices": [
+    "\\(0.90000\\)",
+    "\\(0.92593\\)",
+    "\\(1.08000\\)",
+    "\\(1.46933\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The quantity \\(v_5\\) is the discount factor for year \\(5\\). It moves money backward from time \\(5\\) to time \\(4\\).",
+    "By definition, \\(v_5=\\dfrac{a(4)}{a(5)}\\).",
+    "Since \\(a(t)=1.08^t\\), we have \\(a(4)=1.08^4\\) and \\(a(5)=1.08^5\\).",
+    "Therefore, \\(v_5=\\dfrac{1.08^4}{1.08^5}\\).",
+    "Simplify: \\(v_5=1.08^{-1}\\).",
+    "Thus, \\(v_5=0.92593\\)."
+  ],
+  "generalization": "For an accumulation function \\(a(t)\\), the discount factor for year \\(n\\) is \\(v_n=\\dfrac{a(n-1)}{a(n)}\\). If \\(a(t)=(1+i)^t\\), then \\(v_n=\\dfrac{1}{1+i}\\) for every year \\(n\\).",
+  "answer_text": "The discount factor for year \\(5\\) is \\(\\boxed{0.92593}\\)."
+},
+  {
+  "id": 24,
+  "topic": "present value and discount factor",
+  "title": "Exercise 24",
+  "statement": "[SOA 16; SOA-IT.020] David can receive one of the following two payment streams: i. \\(100\\) at time \\(0\\), \\(200\\) at time \\(n\\) years, and \\(300\\) at time \\(2n\\) years; ii. \\(600\\) at time \\(10\\) years. At an annual effective interest rate of \\(i\\), the present values of the two streams are equal. Given \\(v^n=0.76\\), calculate \\(i\\).",
+  "choices": [
+    "\\(3.5\\%\\)",
+    "\\(4.0\\%\\)",
+    "\\(4.5\\%\\)",
+    "\\(5.0\\%\\)",
+    "\\(5.5\\%\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "The present value of the first payment stream is \\(100+200v^n+300v^{2n}\\).",
+    "The present value of the second payment stream is \\(600v^{10}\\).",
+    "Since the present values are equal, \\(600v^{10}=100+200v^n+300v^{2n}\\).",
+    "Given \\(v^n=0.76\\), we have \\(v^{2n}=(0.76)^2\\).",
+    "Substitute into the equation: \\(600v^{10}=100+200(0.76)+300(0.76)^2\\).",
+    "Compute the right-hand side: \\(100+152+173.28=425.28\\).",
+    "Thus, \\(600v^{10}=425.28\\), so \\(v^{10}=\\dfrac{425.28}{600}=0.7088\\).",
+    "Since \\(v=\\dfrac{1}{1+i}\\), we have \\(v^{10}=(1+i)^{-10}\\).",
+    "Therefore, \\((1+i)^{-10}=0.7088\\).",
+    "Solving gives \\(i=(0.7088)^{-1/10}-1=0.035\\)."
+  ],
+  "generalization": "When two payment streams have equal present values, discount each payment to time \\(0\\), equate the present values, and solve for the unknown interest rate. If \\(v^n\\) is given, use powers such as \\(v^{2n}=(v^n)^2\\) to simplify the equation.",
+  "answer_text": "The annual effective interest rate is \\(\\boxed{3.5\\%}\\)."
+},
+  {
+  "id": 25,
+  "topic": "effective rate of discount",
+  "title": "Exercise 25",
+  "statement": "The amount of interest paid on a loan of \\(X\\) for one year is \\(108\\). The equivalent amount of discount paid on a loan of \\(X\\) for one year is \\(100\\). Determine \\(X\\).",
+  "choices": [
+    "Less than \\(1{,}220\\)",
+    "At least \\(1{,}220\\), but less than \\(1{,}260\\)",
+    "At least \\(1{,}260\\), but less than \\(1{,}300\\)",
+    "At least \\(1{,}300\\), but less than \\(1{,}340\\)",
+    "At least \\(1{,}340\\)"
+  ],
+  "correct": 4,
+  "solution_steps": [
+    "The amount of interest paid is \\(Xi=108\\).",
+    "The amount of discount paid is \\(Xd=100\\).",
+    "Recall the relationship between the effective rate of interest and the effective rate of discount: \\(d=\\dfrac{i}{1+i}\\).",
+    "Equivalently, \\(i=\\dfrac{d}{1-d}\\).",
+    "Using \\(Xi=108\\), substitute \\(i=\\dfrac{d}{1-d}\\): \\(X\\left(\\dfrac{d}{1-d}\\right)=108\\).",
+    "Since \\(Xd=100\\), this becomes \\(\\dfrac{Xd}{1-d}=108\\), so \\(\\dfrac{100}{1-d}=108\\).",
+    "Solve for \\(d\\): \\(100=108(1-d)\\), so \\(108d=8\\), and therefore \\(d=\\dfrac{8}{108}\\).",
+    "Using \\(Xd=100\\), we get \\(X\\left(\\dfrac{8}{108}\\right)=100\\).",
+    "Therefore, \\(X=100\\left(\\dfrac{108}{8}\\right)=1{,}350\\)."
+  ],
+  "generalization": "For a one-period loan of amount \\(X\\), the amount of interest paid is \\(Xi\\), while the amount of discount paid is \\(Xd\\). The effective rate of interest and the effective rate of discount satisfy \\(d=\\dfrac{i}{1+i}\\) and \\(i=\\dfrac{d}{1-d}\\).",
+  "answer_text": "The loan amount is \\(\\boxed{1{,}350}\\), so the correct choice is E."
+},
+  {
+  "id": 26,
+  "topic": "compound interest",
+  "title": "Exercise 26",
+  "statement": "At a certain rate of compound interest, \\(1\\) grows to \\(3\\) in \\(x\\) years, \\(3\\) grows to \\(14\\) in \\(y\\) years, and \\(1\\) grows to \\(21\\) in \\(z\\) years. Determine what \\(5\\) grows to in \\(z-x-y\\) years.",
+  "choices": [
+    "\\(\\dfrac{5}{2}\\)",
+    "\\(\\dfrac{15}{2}\\)",
+    "\\(10\\)",
+    "\\(\\dfrac{35}{2}\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Write each given fact as an accumulation factor equation using \\((1+i)^t\\).",
+    "Since \\(1\\) grows to \\(3\\) in \\(x\\) years, we have \\((1+i)^x=3\\).",
+    "Since \\(3\\) grows to \\(14\\) in \\(y\\) years, we have \\(3(1+i)^y=14\\), so \\((1+i)^y=\\dfrac{14}{3}\\).",
+    "Since \\(1\\) grows to \\(21\\) in \\(z\\) years, we have \\((1+i)^z=21\\).",
+    "We want the accumulated value of \\(5\\) after \\(z-x-y\\) years, which is \\(5(1+i)^{z-x-y}\\).",
+    "Rewrite the expression as \\(5(1+i)^{z-x-y}=\\dfrac{5(1+i)^z}{(1+i)^x(1+i)^y}\\).",
+    "Substitute the known values: \\(5(1+i)^{z-x-y}=\\dfrac{5(21)}{3\\left(\\dfrac{14}{3}\\right)}\\).",
+    "Simplify: \\(\\dfrac{5(21)}{3\\left(\\dfrac{14}{3}\\right)}=\\dfrac{105}{14}=\\dfrac{15}{2}\\)."
+  ],
+  "generalization": "Under compound interest, time exponents can be added and subtracted using the laws of exponents. If \\((1+i)^a\\), \\((1+i)^b\\), and \\((1+i)^c\\) are known, then \\((1+i)^{c-a-b}=\\dfrac{(1+i)^c}{(1+i)^a(1+i)^b}\\).",
+  "answer_text": "\\(5\\) grows to \\(\\boxed{\\dfrac{15}{2}}\\)."
+},
+  {
+  "id": 27,
+  "topic": "simple interest and effective discount",
+  "title": "Exercise 27",
+  "statement": "A loan is made for five years at a simple interest rate of \\(12\\%\\) per annum. What is the equivalent annual effective rate of discount during the fourth year of the loan?",
+  "choices": [
+    "\\(7.69\\%\\)",
+    "\\(8.108\\%\\)",
+    "\\(8.824\\%\\)",
+    "\\(12.00\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let the original loan amount be \\(1\\).",
+    "Since the loan uses simple interest at \\(12\\%\\) per annum, the accumulation function is \\(a(t)=1+0.12t\\).",
+    "The fourth year is the period from time \\(3\\) to time \\(4\\).",
+    "Compute the loan balance at time \\(3\\): \\(a(3)=1+0.12(3)=1.36\\).",
+    "Compute the loan balance at time \\(4\\): \\(a(4)=1+0.12(4)=1.48\\).",
+    "The effective rate of discount during the fourth year is \\(d_4=\\dfrac{a(4)-a(3)}{a(4)}\\).",
+    "Substitute the values: \\(d_4=\\dfrac{1.48-1.36}{1.48}\\).",
+    "Thus, \\(d_4=0.08108=8.108\\%\\)."
+  ],
+  "generalization": "Under simple interest with rate \\(i\\), the accumulation function is \\(a(t)=1+it\\). The effective rate of discount during year \\(n\\) is \\(d_n=\\dfrac{a(n)-a(n-1)}{a(n)}\\).",
+  "answer_text": "The equivalent annual effective rate of discount during the fourth year is \\(\\boxed{8.108\\%}\\)."
+},
+  {
+  "id": 28,
+  "topic": "simple interest",
+  "title": "Exercise 28",
+  "statement": "At a rate of simple interest \\(i\\), \\(10\\) will accumulate to \\(15\\) after \\(x\\) years. What will \\(20\\) accumulate to at a simple interest rate of \\(2i\\) after \\(5x\\) years?",
+  "choices": [
+    "\\(60\\)",
+    "\\(100\\)",
+    "\\(120\\)",
+    "\\(150\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Under simple interest, the accumulated value is \\(A(t)=P(1+it)\\).",
+    "We are given that \\(10\\) accumulates to \\(15\\) after \\(x\\) years at simple interest rate \\(i\\), so \\(10(1+ix)=15\\).",
+    "Divide by \\(10\\): \\(1+ix=1.5\\).",
+    "Thus, \\(ix=0.5\\).",
+    "Now compute the accumulated value of \\(20\\) at simple interest rate \\(2i\\) after \\(5x\\) years.",
+    "Using simple interest, \\(A=20\\bigl(1+(2i)(5x)\\bigr)\\).",
+    "Simplify: \\(A=20(1+10ix)\\).",
+    "Since \\(ix=0.5\\), we get \\(A=20(1+10(0.5))\\).",
+    "Therefore, \\(A=20(6)=120\\)."
+  ],
+  "generalization": "Under simple interest, the accumulated value depends on the product \\(it\\). If a condition gives the value of \\(ix\\), it can be substituted directly into other simple interest expressions involving multiples of \\(i\\) and \\(x\\).",
+  "answer_text": "\\(20\\) accumulates to \\(\\boxed{120}\\)."
+},
+  {
+  "id": 29,
+  "topic": "compound interest and simple interest",
+  "title": "Exercise 29",
+  "statement": "An investment earns \\(10\\%\\) compound interest for each complete year and \\(8\\%\\) simple interest for each partial year. A \\(\\$100\\) investment is made on January \\(1\\), \\(2008\\). What is the accumulated value of the investment on July \\(1\\), \\(2012\\)?",
+  "choices": [
+    "\\(\\$146.41\\)",
+    "\\(\\$150.00\\)",
+    "\\(\\$152.27\\)",
+    "\\(\\$161.05\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "From January \\(1\\), \\(2008\\), to January \\(1\\), \\(2012\\), there are \\(4\\) complete years.",
+    "From January \\(1\\), \\(2012\\), to July \\(1\\), \\(2012\\), there is \\(0.5\\) of a year.",
+    "For the \\(4\\) complete years, use compound interest at \\(10\\%\\): \\(100(1.10)^4\\).",
+    "For the partial year, use simple interest at \\(8\\%\\), giving the factor \\(1+0.08(0.5)\\).",
+    "Therefore, \\(AV=100(1.10)^4\\bigl(1+0.08(0.5)\\bigr)\\).",
+    "Compute: \\(AV=100(1.10)^4(1.04)=152.2664\\)."
+  ],
+  "generalization": "When complete years use compound interest and partial years use simple interest, first accumulate through the full years using \\((1+i)^n\\), then multiply by the simple interest factor \\(1+jt\\) for the partial year.",
+  "answer_text": "The accumulated value is \\(\\boxed{\\$152.27}\\)."
+},
+  {
+  "id": 30,
+  "topic": "simple interest and compound interest",
+  "title": "Exercise 30",
+  "statement": "An investor puts \\(\\$100\\) into Fund \\(X\\) and \\(\\$100\\) into Fund \\(Y\\). Fund \\(Y\\) earns compound interest at the annual rate of \\(j>0\\), and Fund \\(X\\) earns simple interest at the annual rate of \\(1.05j\\). At the end of \\(2\\) years, the amount in Fund \\(Y\\) is equal to the amount in Fund \\(X\\). Calculate the amount in Fund \\(Y\\) at the end of \\(5\\) years.",
+  "choices": [
+    "\\(150\\)",
+    "\\(153\\)",
+    "\\(157\\)",
+    "\\(161\\)",
+    "\\(165\\)"
+  ],
+  "correct": 3,
+  "solution_steps": [
+    "Fund \\(X\\) earns simple interest at rate \\(1.05j\\), so its accumulation function is \\(a_X(t)=1+1.05jt\\).",
+    "Fund \\(Y\\) earns compound interest at rate \\(j\\), so its accumulation function is \\(a_Y(t)=(1+j)^t\\).",
+    "At the end of \\(2\\) years, the amounts are equal. Since both funds start with \\(100\\), we have \\(100a_X(2)=100a_Y(2)\\).",
+    "Cancel \\(100\\): \\(a_X(2)=a_Y(2)\\).",
+    "Substitute the accumulation functions: \\(1+1.05j(2)=(1+j)^2\\).",
+    "Thus, \\(1+2.1j=(1+j)^2\\).",
+    "Expand the right-hand side: \\(1+2.1j=1+2j+j^2\\).",
+    "Simplify: \\(j^2=0.1j\\).",
+    "Since \\(j>0\\), divide by \\(j\\) to obtain \\(j=0.1\\).",
+    "The amount in Fund \\(Y\\) at the end of \\(5\\) years is \\(100(1.10)^5\\).",
+    "Therefore, \\(100(1.10)^5=161.05\\)."
+  ],
+  "generalization": "When comparing simple interest and compound interest, first write the appropriate accumulation function for each fund. Under simple interest, \\(a(t)=1+it\\). Under compound interest, \\(a(t)=(1+i)^t\\). Then use the equality condition to solve for the unknown rate.",
+  "answer_text": "The amount in Fund \\(Y\\) at the end of \\(5\\) years is \\(\\boxed{161.05}\\), so the closest answer is D."
+},
+  {
+  "id": 31,
+  "topic": "simple interest",
+  "title": "Exercise 31",
+  "statement": "Simple interest of \\(i=0.04\\) is being credited to a fund. In which year is this equivalent to an effective rate of \\(2.5\\%\\)?",
+  "choices": [
+    "\\(14\\)",
+    "\\(15\\)",
+    "\\(16\\)",
+    "\\(17\\)",
+    "Never"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the fund earns simple interest of \\(4\\%\\), the accumulation function is \\(a(t)=1+0.04t\\).",
+    "The effective rate of interest earned during year \\(t\\) is \\(i_t=\\dfrac{a(t)-a(t-1)}{a(t-1)}\\).",
+    "Substitute the accumulation function: \\(i_t=\\dfrac{(1+0.04t)-\\bigl(1+0.04(t-1)\\bigr)}{1+0.04(t-1)}\\).",
+    "The numerator simplifies to \\(0.04\\).",
+    "Thus, \\(i_t=\\dfrac{0.04}{1+0.04(t-1)}\\).",
+    "Since \\(1+0.04(t-1)=0.96+0.04t\\), we have \\(i_t=\\dfrac{0.04}{0.96+0.04t}\\).",
+    "Set this equal to \\(2.5\\%\\): \\(0.025=\\dfrac{0.04}{0.96+0.04t}\\).",
+    "Solve: \\(0.025(0.96+0.04t)=0.04\\).",
+    "This gives \\(0.024+0.001t=0.04\\), so \\(0.001t=0.016\\).",
+    "Therefore, \\(t=16\\)."
+  ],
+  "generalization": "Under simple interest with rate \\(i\\), the effective interest rate during year \\(t\\) is \\(i_t=\\dfrac{i}{1+i(t-1)}\\). This decreases as \\(t\\) increases.",
+  "answer_text": "The equivalent effective rate of \\(2.5\\%\\) occurs during year \\(\\boxed{16}\\), so the correct choice is C."
+},
+  {
+  "id": 32,
+  "topic": "nominal interest rate",
+  "title": "Exercise 32",
+  "statement": "Sam invests \\(\\$200\\) in a bank. The fund earns a nominal interest rate of \\(12\\%\\), compounded monthly. What is the fund value five years after the time of the investment?",
+  "choices": [
+    "\\(\\$320.00\\)",
+    "\\(\\$352.47\\)",
+    "\\(\\$363.34\\)",
+    "\\(\\$370.41\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the nominal interest rate is compounded monthly, there are \\(m=12\\) conversion periods per year.",
+    "The nominal annual rate is \\(i^{(12)}=0.12\\).",
+    "The monthly effective interest rate is \\(\\dfrac{i^{(12)}}{12}=\\dfrac{0.12}{12}=0.01\\).",
+    "Over \\(5\\) years, there are \\(12\\cdot 5=60\\) monthly compounding periods.",
+    "Using the nominal interest accumulation formula, \\(A(5)=200\\left(1+\\dfrac{0.12}{12}\\right)^{12(5)}\\).",
+    "Thus, \\(A(5)=200(1.01)^{60}\\).",
+    "Therefore, \\(A(5)=363.3393\\).",
+    "Alternatively, the equivalent annual effective rate satisfies \\(1+i=\\left(1+\\dfrac{0.12}{12}\\right)^{12}\\).",
+    "So \\(i=\\left(1+\\dfrac{0.12}{12}\\right)^{12}-1=0.126825\\).",
+    "Then \\(A(5)=200(1.126825)^5=363.3393\\)."
+  ],
+  "generalization": "If a nominal annual interest rate \\(i^{(m)}\\) is compounded \\(m\\) times per year, then the effective rate per conversion period is \\(\\dfrac{i^{(m)}}{m}\\). Over \\(t\\) years, the accumulated value is \\(A(t)=A(0)\\left(1+\\dfrac{i^{(m)}}{m}\\right)^{mt}\\).",
+  "answer_text": "The fund value after five years is \\(\\boxed{\\$363.34}\\)."
+},
+  {
+  "id": 33,
+  "topic": "nominal interest rate",
+  "title": "Exercise 33",
+  "statement": "Sam invested \\(\\$100\\) in a bank four years ago. The fund earned a nominal interest rate of \\(x\\%\\), compounded quarterly. Today, he closes his account and withdraws \\(\\$180\\). Calculate \\(x\\), the nominal annual interest rate compounded quarterly, and \\(i\\), the equivalent annual effective interest rate.",
+  "choices": [
+    "\\(x=12.50\\%,\\ i=13.08\\%\\)",
+    "\\(x=14.97\\%,\\ i=15.83\\%\\)",
+    "\\(x=15.83\\%,\\ i=14.97\\%\\)",
+    "\\(x=18.00\\%,\\ i=19.25\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Since the nominal interest rate is compounded quarterly, there are \\(m=4\\) conversion periods per year.",
+    "Over \\(4\\) years, there are \\(4\\cdot 4=16\\) quarterly compounding periods.",
+    "Let \\(r\\) be the nominal annual rate expressed as a decimal. Since the problem asks for \\(x\\%\\), we have \\(x=100r\\).",
+    "The quarterly effective interest rate is \\(\\dfrac{r}{4}\\).",
+    "The accumulation equation is \\(100\\left(1+\\dfrac{r}{4}\\right)^{16}=180\\).",
+    "Divide by \\(100\\): \\(\\left(1+\\dfrac{r}{4}\\right)^{16}=1.8\\).",
+    "Take the sixteenth root: \\(1+\\dfrac{r}{4}=1.8^{1/16}\\).",
+    "Thus, \\(\\dfrac{r}{4}=1.8^{1/16}-1=0.03742\\).",
+    "Therefore, \\(r=4(0.03742)=0.149679\\).",
+    "Since \\(x=100r\\), we get \\(x=14.9679\\%\\).",
+    "The equivalent annual effective interest rate satisfies \\(1+i=\\left(1+\\dfrac{r}{4}\\right)^4\\).",
+    "Thus, \\(i=\\left(1+\\dfrac{0.149679}{4}\\right)^4-1=0.158292\\)."
+  ],
+  "generalization": "If a nominal annual interest rate \\(i^{(m)}\\) is compounded \\(m\\) times per year, the effective rate per conversion period is \\(\\dfrac{i^{(m)}}{m}\\). Over \\(t\\) years, the accumulated value is \\(A(t)=A(0)\\left(1+\\dfrac{i^{(m)}}{m}\\right)^{mt}\\). The equivalent annual effective rate is \\(i=\\left(1+\\dfrac{i^{(m)}}{m}\\right)^m-1\\).",
+  "answer_text": "The nominal annual rate compounded quarterly is \\(\\boxed{x=14.9679\\%}\\), and the equivalent annual effective interest rate is \\(\\boxed{i=15.8292\\%}\\)."
+},
+  {
+  "id": 34,
+  "topic": "nominal interest rate",
+  "title": "Exercise 34",
+  "statement": "James invests \\(\\$100\\) in a bank. The fund earns a \\(10\\%\\) annual effective interest rate. What is the fund value at the end of six months?",
+  "choices": [
+    "\\(\\$104.00\\)",
+    "\\(\\$104.88\\)",
+    "\\(\\$105.00\\)",
+    "\\(\\$110.00\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "There are two six-month periods in one year, so \\(m=2\\).",
+    "We are given \\(A(0)=100\\) and an annual effective interest rate \\(i=10\\%\\).",
+    "Let \\(i^{(2)}\\) be the nominal annual interest rate convertible semiannually.",
+    "Since this rate is equivalent to the annual effective rate of \\(10\\%\\), we have \\(\\left(1+\\dfrac{i^{(2)}}{2}\\right)^2=1.10\\).",
+    "Taking the square root gives \\(1+\\dfrac{i^{(2)}}{2}=1.10^{1/2}\\).",
+    "Thus, \\(\\dfrac{i^{(2)}}{2}=1.10^{1/2}-1=0.04881\\).",
+    "Therefore, the effective interest rate for six months is \\(4.881\\%\\).",
+    "Accumulate \\(100\\) for one six-month period: \\(A\\left(\\dfrac{1}{2}\\right)=100(1.04881)\\).",
+    "Hence, \\(A\\left(\\dfrac{1}{2}\\right)=104.88\\)."
+  ],
+  "generalization": "To convert an annual effective interest rate \\(i\\) to an effective rate over one \\(m\\)-th of a year, solve \\(1+j=(1+i)^{1/m}\\). Thus, \\(j=(1+i)^{1/m}-1\\).",
+  "answer_text": "The fund value at the end of six months is \\(\\boxed{\\$104.88}\\)."
+},
+  {
+  "id": 35,
+  "topic": "nominal interest rate",
+  "title": "Exercise 35",
+  "statement": "Calculate \\(i^{(12)}\\) and \\(i^{(4)}\\), given that the annual effective interest rate is \\(i=10\\%\\).",
+  "choices": [
+    "\\(i^{(12)}=9.5000\\%,\\ i^{(4)}=9.5000\\%\\)",
+    "\\(i^{(12)}=9.5690\\%,\\ i^{(4)}=9.6455\\%\\)",
+    "\\(i^{(12)}=10.0000\\%,\\ i^{(4)}=10.0000\\%\\)",
+    "\\(i^{(12)}=10.4713\\%,\\ i^{(4)}=10.3813\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Use the relationship \\(1+i=\\left(1+\\dfrac{i^{(m)}}{m}\\right)^m\\).",
+    "Since the annual effective interest rate is \\(i=10\\%\\), we have \\(1+i=1.10\\).",
+    "For monthly compounding, \\(m=12\\), so \\(\\left(1+\\dfrac{i^{(12)}}{12}\\right)^{12}=1.10\\).",
+    "Taking the twelfth root gives \\(1+\\dfrac{i^{(12)}}{12}=1.10^{1/12}\\).",
+    "Therefore, \\(i^{(12)}=12\\left(1.10^{1/12}-1\\right)\\).",
+    "Thus, \\(i^{(12)}=0.095690=9.5690\\%\\).",
+    "For quarterly compounding, \\(m=4\\), so \\(\\left(1+\\dfrac{i^{(4)}}{4}\\right)^4=1.10\\).",
+    "Taking the fourth root gives \\(1+\\dfrac{i^{(4)}}{4}=1.10^{1/4}\\).",
+    "Therefore, \\(i^{(4)}=4\\left(1.10^{1/4}-1\\right)\\).",
+    "Thus, \\(i^{(4)}=0.096455=9.6455\\%\\)."
+  ],
+  "generalization": "Given an annual effective interest rate \\(i\\), the equivalent nominal annual rate convertible \\(m\\) times per year is \\(i^{(m)}=m\\left((1+i)^{1/m}-1\\right)\\).",
+  "answer_text": "The nominal rates are \\(\\boxed{i^{(12)}=9.5690\\%}\\) and \\(\\boxed{i^{(4)}=9.6455\\%}\\)."
+},
+  {
+  "id": 36,
+  "topic": "nominal interest rate",
+  "title": "Exercise 36",
+  "statement": "You deposit \\(\\$100\\) into a fund that accumulates at an annual effective interest rate of \\(7\\%\\). Four years later, the interest rate changes to an annual nominal rate of \\(8\\%\\), compounded quarterly. How many years will it take for your deposit to double?",
+  "choices": [
+    "\\(9.00\\)",
+    "\\(9.25\\)",
+    "\\(9.33\\)",
+    "\\(9.50\\)",
+    "\\(10.00\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "First, check whether the fund doubles before the interest rate changes.",
+    "After four years, the fund value is \\(100(1.07)^4=131.0796\\).",
+    "Since \\(131.0796<200\\), the fund does not double during the first four years.",
+    "Let \\(n\\) be the total number of years needed for the deposit to double.",
+    "After year \\(4\\), the fund earns a nominal annual interest rate of \\(8\\%\\), compounded quarterly.",
+    "The effective quarterly interest rate is \\(\\dfrac{0.08}{4}=0.02\\).",
+    "From time \\(4\\) to time \\(n\\), there are \\(4(n-4)\\) quarters.",
+    "Set up the doubling equation: \\(100(1.07)^4(1.02)^{4(n-4)}=200\\).",
+    "Divide by \\(100\\): \\((1.07)^4(1.02)^{4(n-4)}=2\\).",
+    "Thus, \\((1.02)^{4(n-4)}=\\dfrac{2}{(1.07)^4}\\).",
+    "Taking natural logarithms gives \\(4(n-4)\\ln(1.02)=\\ln\\left(\\dfrac{2}{(1.07)^4}\\right)\\).",
+    "Therefore, \\(n=4+\\dfrac{\\ln\\left(\\dfrac{2}{(1.07)^4}\\right)}{4\\ln(1.02)}\\).",
+    "Thus, \\(n=9.3340\\)."
+  ],
+  "generalization": "When an interest rate changes at a certain time, accumulate separately over each time interval. For a nominal annual rate \\(i^{(m)}\\) compounded \\(m\\) times per year, the accumulation factor over \\(t\\) years is \\(\\left(1+\\dfrac{i^{(m)}}{m}\\right)^{mt}\\).",
+  "answer_text": "It will take approximately \\(\\boxed{9.33}\\) years for the deposit to double, so the correct choice is C."
+},
+  {
+  "id": 37,
+  "topic": "nominal interest rate",
+  "title": "Exercise 37",
+  "statement": "On January \\(1\\), \\(1980\\), Jack deposited \\(\\$1{,}000\\) into Bank \\(X\\) to earn interest at the rate of \\(j\\) per annum compounded semiannually. On January \\(1\\), \\(1985\\), he transferred his account to Bank \\(Y\\) to earn interest at the rate of \\(k\\) per annum compounded quarterly. On January \\(1\\), \\(1988\\), the balance at Bank \\(Y\\) is \\(\\$1{,}990.76\\). If Jack could have earned interest at the rate of \\(k\\) per annum compounded quarterly from January \\(1\\), \\(1980\\), through January \\(1\\), \\(1988\\), his balance would have been \\(\\$2{,}203.76\\). Calculate the ratio \\(\\dfrac{k}{j}\\).",
+  "choices": [
+    "\\(1.25\\)",
+    "\\(1.30\\)",
+    "\\(1.35\\)",
+    "\\(1.40\\)",
+    "\\(1.45\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "First calculate \\(k\\).",
+    "From January \\(1\\), \\(1980\\), to January \\(1\\), \\(1988\\), there are \\(8\\) years.",
+    "Since \\(k\\) is compounded quarterly, there are \\(4\\cdot 8=32\\) quarterly compounding periods.",
+    "Using the hypothetical balance, \\(1{,}000\\left(1+\\dfrac{k}{4}\\right)^{32}=2{,}203.76\\).",
+    "Divide by \\(1{,}000\\): \\(\\left(1+\\dfrac{k}{4}\\right)^{32}=2.20376\\).",
+    "Taking the thirty-second root gives \\(1+\\dfrac{k}{4}=1.025\\).",
+    "Thus, \\(\\dfrac{k}{4}=0.025\\), so \\(k=0.10\\).",
+    "Now calculate \\(j\\). From January \\(1\\), \\(1980\\), to January \\(1\\), \\(1985\\), there are \\(5\\) years, or \\(2\\cdot 5=10\\) semiannual compounding periods.",
+    "From January \\(1\\), \\(1985\\), to January \\(1\\), \\(1988\\), there are \\(3\\) years, or \\(4\\cdot 3=12\\) quarterly compounding periods.",
+    "The actual balance equation is \\(1{,}000\\left(1+\\dfrac{j}{2}\\right)^{10}\\left(1+\\dfrac{k}{4}\\right)^{12}=1{,}990.76\\).",
+    "Since \\(1+\\dfrac{k}{4}=1.025\\), this becomes \\(1{,}000\\left(1+\\dfrac{j}{2}\\right)^{10}(1.025)^{12}=1{,}990.76\\).",
+    "Divide by \\(1{,}000\\): \\(\\left(1+\\dfrac{j}{2}\\right)^{10}(1.025)^{12}=1.99076\\).",
+    "Thus, \\(\\left(1+\\dfrac{j}{2}\\right)^{10}=\\dfrac{1.99076}{(1.025)^{12}}=1.48024\\).",
+    "Taking the tenth root gives \\(1+\\dfrac{j}{2}=1.04\\).",
+    "Therefore, \\(\\dfrac{j}{2}=0.04\\), so \\(j=0.08\\).",
+    "Finally, \\(\\dfrac{k}{j}=\\dfrac{0.10}{0.08}=1.25\\)."
+  ],
+  "generalization": "When a fund earns different nominal rates over different time intervals, write one accumulation factor for each interval. For a nominal annual rate \\(i^{(m)}\\) compounded \\(m\\) times per year over \\(t\\) years, the accumulation factor is \\(\\left(1+\\dfrac{i^{(m)}}{m}\\right)^{mt}\\).",
+  "answer_text": "The ratio is \\(\\boxed{\\dfrac{k}{j}=1.25}\\), so the correct choice is A."
+},
+  {
+  "id": 38,
+  "topic": "nominal interest rate",
+  "title": "Exercise 38",
+  "statement": "Jennifer deposits \\(\\$1{,}000\\) into a bank account. The bank credits interest at a nominal annual rate of \\(i\\), convertible semiannually, for the first \\(7\\) years and a nominal annual rate of \\(2i\\), convertible quarterly, for all years thereafter. The accumulated amount in the account at the end of \\(5\\) years is \\(X\\). The accumulated amount in the account at the end of \\(10.5\\) years is \\(\\$1{,}980\\). Calculate \\(X\\).",
+  "choices": [
+    "\\(1200\\)",
+    "\\(1225\\)",
+    "\\(1250\\)",
+    "\\(1275\\)",
+    "\\(1300\\)"
+  ],
+  "correct": 3,
+  "solution_steps": [
+    "For a nominal annual rate \\(i\\) convertible semiannually, the effective rate per half-year is \\(\\dfrac{i}{2}\\).",
+    "For a nominal annual rate \\(2i\\) convertible quarterly, the effective rate per quarter is \\(\\dfrac{2i}{4}=\\dfrac{i}{2}\\).",
+    "Thus, both accumulation periods use the same periodic factor \\(1+\\dfrac{i}{2}\\).",
+    "From time \\(0\\) to time \\(5\\), there are \\(2\\cdot 5=10\\) semiannual conversion periods.",
+    "Therefore, \\(X=1{,}000\\left(1+\\dfrac{i}{2}\\right)^{10}\\).",
+    "From time \\(0\\) to time \\(7\\), there are \\(2\\cdot 7=14\\) semiannual conversion periods.",
+    "From time \\(7\\) to time \\(10.5\\), there are \\(3.5\\) years, or \\(4\\cdot 3.5=14\\) quarterly conversion periods.",
+    "Using the accumulated value at time \\(10.5\\), we get \\(1{,}000\\left(1+\\dfrac{i}{2}\\right)^{14}\\left(1+\\dfrac{2i}{4}\\right)^{14}=1{,}980\\).",
+    "Since \\(\\dfrac{2i}{4}=\\dfrac{i}{2}\\), this becomes \\(1{,}000\\left(1+\\dfrac{i}{2}\\right)^{28}=1{,}980\\).",
+    "Divide by \\(1{,}000\\): \\(\\left(1+\\dfrac{i}{2}\\right)^{28}=1.98\\).",
+    "Taking the \\(28\\)-th root gives \\(1+\\dfrac{i}{2}=1.98^{1/28}=1.024696\\).",
+    "Now substitute into \\(X=1{,}000\\left(1+\\dfrac{i}{2}\\right)^{10}\\).",
+    "Thus, \\(X=1{,}000(1.024696)^{10}=1{,}276.30\\)."
+  ],
+  "generalization": "When a nominal rate changes, convert each nominal rate into its effective rate per conversion period. In this problem, \\(i\\) convertible semiannually gives \\(i/2\\), while \\(2i\\) convertible quarterly gives \\(2i/4=i/2\\), so both parts use the same periodic accumulation factor.",
+  "answer_text": "The accumulated amount is approximately \\(\\boxed{1{,}276.30}\\), so the closest answer is \\(\\boxed{1275}\\)."
+},
+  {
+  "id": 39,
+  "topic": "nominal interest rate",
+  "title": "Exercise 39",
+  "statement": "Brian and Jennifer each take out a loan of \\(X\\). Jennifer will repay her loan by making one payment of \\(\\$800\\) at the end of year \\(10\\). Brian will repay his loan by making one payment of \\(\\$1{,}120\\) at the end of year \\(10\\). The nominal annual rate convertible semiannually being charged to Jennifer is exactly one-half the nominal annual rate convertible semiannually being charged to Brian. Calculate \\(X\\).",
+  "choices": [
+    "\\(562\\)",
+    "\\(565\\)",
+    "\\(568\\)",
+    "\\(571\\)",
+    "\\(574\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Let \\(i\\) be the nominal annual rate convertible semiannually charged to Jennifer.",
+    "Then the nominal annual rate convertible semiannually charged to Brian is \\(2i\\).",
+    "Since the loans are repaid at the end of \\(10\\) years and interest is convertible semiannually, there are \\(2(10)=20\\) conversion periods.",
+    "For Jennifer, the effective semiannual rate is \\(\\dfrac{i}{2}\\).",
+    "For Brian, the effective semiannual rate is \\(\\dfrac{2i}{2}=i\\).",
+    "Since both loans have the same present value \\(X\\), equate the present values: \\(800\\left(1+\\dfrac{i}{2}\\right)^{-20}=1120(1+i)^{-20}\\).",
+    "Divide both sides by \\(800\\): \\(\\left(1+\\dfrac{i}{2}\\right)^{-20}=1.4(1+i)^{-20}\\).",
+    "Rewrite \\(1+\\dfrac{i}{2}\\) as \\(\\dfrac{2+i}{2}\\), giving \\(\\left(\\dfrac{2+i}{2}\\right)^{-20}=1.4(1+i)^{-20}\\).",
+    "Solving gives \\(\\dfrac{2+i}{1+i}=2(1.4)^{1/20}=1.9666\\).",
+    "Thus, \\(2+i=1.9666(1+i)\\).",
+    "Solving this equation gives \\(i=0.034554\\).",
+    "Now use Brian's repayment amount: \\(X=1120(1+i)^{-20}\\).",
+    "Substitute \\(i=0.034554\\): \\(X=1120(1.034554)^{-20}=567.75\\)."
+  ],
+  "generalization": "When two loans have the same present value but different repayment amounts and interest rates, equate the present values of the repayments. For a nominal annual rate convertible semiannually, the effective semiannual rate is the nominal rate divided by \\(2\\).",
+  "answer_text": "The loan amount is approximately \\(\\boxed{567.75}\\), so the closest answer is \\(\\boxed{568}\\)."
+},
+  {
+  "id": 40,
+  "topic": "nominal interest rate and simple interest",
+  "title": "Exercise 40",
+  "statement": "[SOA 3; SOA-IT.003] Eric deposits \\(\\$100\\) into a savings account at time \\(0\\), which pays interest at an annual nominal rate of \\(i\\), compounded semiannually. Mike deposits \\(\\$200\\) into a different savings account at time \\(0\\), which pays simple interest at an annual rate of \\(i\\). Eric and Mike earn the same amount of interest during the last \\(6\\) months of the \\(8\\)th year. Calculate \\(i\\).",
+  "choices": [
+    "\\(9.06\\%\\)",
+    "\\(9.26\\%\\)",
+    "\\(9.46\\%\\)",
+    "\\(9.66\\%\\)",
+    "\\(9.86\\%\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The last \\(6\\) months of the \\(8\\)th year is the period from time \\(7.5\\) to time \\(8\\).",
+    "For Eric, the annual nominal rate \\(i\\) is compounded semiannually, so the effective semiannual rate is \\(\\dfrac{i}{2}\\).",
+    "Eric's account value at time \\(8\\) is \\(100\\left(1+\\dfrac{i}{2}\\right)^{16}\\).",
+    "Eric's account value at time \\(7.5\\) is \\(100\\left(1+\\dfrac{i}{2}\\right)^{15}\\).",
+    "Thus, Eric's interest during the last \\(6\\) months of the \\(8\\)th year is \\(100\\left(1+\\dfrac{i}{2}\\right)^{16}-100\\left(1+\\dfrac{i}{2}\\right)^{15}\\).",
+    "For Mike, the account earns simple interest at annual rate \\(i\\), so his accumulated value at time \\(t\\) is \\(200(1+it)\\).",
+    "Mike's interest from time \\(7.5\\) to time \\(8\\) is \\(200(1+8i)-200(1+7.5i)\\).",
+    "Equate the interest amounts: \\(100\\left(1+\\dfrac{i}{2}\\right)^{16}-100\\left(1+\\dfrac{i}{2}\\right)^{15}=200(1+8i)-200(1+7.5i)\\).",
+    "Factor and simplify: \\(100\\left(1+\\dfrac{i}{2}\\right)^{15}\\left(\\dfrac{i}{2}\\right)=100i\\).",
+    "Since \\(i>0\\), divide both sides by \\(100i\\) to get \\(\\dfrac{1}{2}\\left(1+\\dfrac{i}{2}\\right)^{15}=1\\).",
+    "Thus, \\(\\left(1+\\dfrac{i}{2}\\right)^{15}=2\\).",
+    "Taking the \\(15\\)-th root gives \\(1+\\dfrac{i}{2}=2^{1/15}\\).",
+    "Therefore, \\(i=2\\left(2^{1/15}-1\\right)=0.0946\\)."
+  ],
+  "generalization": "For nominal interest compounded semiannually, the effective semiannual rate is \\(\\dfrac{i}{2}\\). For simple interest, the interest earned over an interval of length \\(h\\) on principal \\(P\\) is \\(Pih\\). To compare interest earned over the same period under different interest methods, compute the change in accumulated value over that period and equate the two amounts.",
+  "answer_text": "The annual rate is \\(\\boxed{9.46\\%}\\), so the correct choice is C."
+},
+  {
+  "id": 41,
+  "topic": "nominal interest rate and nominal discount rate",
+  "title": "Exercise 41",
+  "statement": "John invests \\(\\$1{,}000\\) in a fund which earns interest during the first year at a nominal rate of \\(K\\) convertible quarterly. During the second year, the fund earns interest at a nominal discount rate of \\(K\\) convertible quarterly. At the end of the second year, the fund has accumulated to \\(\\$1{,}173.54\\). Calculate \\(K\\).",
+  "choices": [
+    "\\(0.064\\)",
+    "\\(0.068\\)",
+    "\\(0.072\\)",
+    "\\(0.076\\)",
+    "\\(0.080\\)"
+  ],
+  "correct": 4,
+  "solution_steps": [
+    "During the first year, the fund earns a nominal interest rate \\(K\\) convertible quarterly, so the effective quarterly interest rate is \\(\\dfrac{K}{4}\\).",
+    "The accumulation factor for the first year is \\(\\left(1+\\dfrac{K}{4}\\right)^4\\).",
+    "During the second year, the fund earns a nominal discount rate \\(K\\) convertible quarterly, so the effective quarterly discount rate is \\(\\dfrac{K}{4}\\).",
+    "The accumulation factor corresponding to a quarterly discount rate \\(\\dfrac{K}{4}\\) is \\(\\left(1-\\dfrac{K}{4}\\right)^{-1}\\).",
+    "Thus, the accumulation factor for the second year is \\(\\left(1-\\dfrac{K}{4}\\right)^{-4}\\).",
+    "Set up the accumulated value equation: \\(1{,}000\\left(1+\\dfrac{K}{4}\\right)^4\\left(1-\\dfrac{K}{4}\\right)^{-4}=1{,}173.54\\).",
+    "Divide by \\(1{,}000\\): \\(\\left(1+\\dfrac{K}{4}\\right)^4\\left(1-\\dfrac{K}{4}\\right)^{-4}=1.17354\\).",
+    "Rewrite as \\(\\left(\\dfrac{1+\\frac{K}{4}}{1-\\frac{K}{4}}\\right)^4=1.17354\\).",
+    "Taking the fourth root gives \\(\\dfrac{1+\\frac{K}{4}}{1-\\frac{K}{4}}=1.17354^{1/4}\\).",
+    "Solving gives \\(K=4\\left(\\dfrac{1.17354^{1/4}-1}{1.17354^{1/4}+1}\\right)\\).",
+    "Therefore, \\(K=0.0800\\)."
+  ],
+  "generalization": "For a nominal interest rate \\(K\\) convertible quarterly, the yearly accumulation factor is \\(\\left(1+\\dfrac{K}{4}\\right)^4\\). For a nominal discount rate \\(K\\) convertible quarterly, the yearly accumulation factor is \\(\\left(1-\\dfrac{K}{4}\\right)^{-4}\\).",
+  "answer_text": "The nominal rate is \\(\\boxed{K=0.080}\\), so the correct choice is E."
+},
+  {
+  "id": 42,
+  "topic": "nominal interest rate and nominal discount rate",
+  "title": "Exercise 42",
+  "statement": "Express \\(i^{(9)}\\) as a function of \\(d^{(3)}\\).",
+  "choices": [
+    "\\(9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{1/3}-9\\)",
+    "\\(9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-9\\)",
+    "\\(9\\left(1+\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-9\\)",
+    "\\(9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{1/3}+9\\)",
+    "\\(9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}+9\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "For the nominal interest rate \\(i^{(9)}\\), the annual accumulation factor is \\(\\left(1+\\dfrac{i^{(9)}}{9}\\right)^9\\).",
+    "For the nominal discount rate \\(d^{(3)}\\), the annual discount factor is \\(\\left(1-\\dfrac{d^{(3)}}{3}\\right)^3\\).",
+    "Therefore, the corresponding annual accumulation factor is \\(\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-3}\\).",
+    "Since the two rates are equivalent, set the annual accumulation factors equal: \\(\\left(1+\\dfrac{i^{(9)}}{9}\\right)^9=\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-3}\\).",
+    "Taking the ninth root gives \\(1+\\dfrac{i^{(9)}}{9}=\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}\\).",
+    "Subtract \\(1\\): \\(\\dfrac{i^{(9)}}{9}=\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-1\\).",
+    "Multiply by \\(9\\): \\(i^{(9)}=9\\left[\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-1\\right]\\).",
+    "Equivalently, \\(i^{(9)}=9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-9\\)."
+  ],
+  "generalization": "To convert between a nominal interest rate and a nominal discount rate, equate their annual accumulation factors. For nominal interest, use \\(\\left(1+\\dfrac{i^{(n)}}{n}\\right)^n\\). For nominal discount, use \\(\\left(1-\\dfrac{d^{(m)}}{m}\\right)^{-m}\\).",
+  "answer_text": "The expression is \\(\\boxed{i^{(9)}=9\\left(1-\\dfrac{d^{(3)}}{3}\\right)^{-1/3}-9}\\), so the correct choice is B."
+},
+  {
+  "id": 43,
+  "topic": "nominal interest rate and nominal discount rate",
+  "title": "Exercise 43",
+  "statement": "At time \\(t=0\\), John deposits \\(\\$1{,}000\\) into a fund which credits interest at a nominal interest rate of \\(10\\%\\), compounded semiannually. At the same time, he deposits \\(P\\) into a different fund which credits interest at a nominal discount rate of \\(6\\%\\), compounded monthly. At time \\(t=20\\), the amounts in each fund are equal. What is the annual effective interest rate earned on the total deposits, \\(1000+P\\), over the \\(20\\)-year period?",
+  "choices": [
+    "\\(0.0744\\)",
+    "\\(0.0754\\)",
+    "\\(0.0764\\)",
+    "\\(0.0774\\)",
+    "\\(0.0784\\)"
+  ],
+  "correct": 4,
+  "solution_steps": [
+    "First, solve for \\(P\\) using the fact that the two funds have equal accumulated values at time \\(20\\).",
+    "For the first fund, the nominal interest rate is \\(10\\%\\), compounded semiannually. The effective semiannual interest rate is \\(\\dfrac{0.10}{2}=0.05\\).",
+    "Over \\(20\\) years, there are \\(20\\cdot 2=40\\) semiannual periods.",
+    "Thus, the accumulated value of the first fund at time \\(20\\) is \\(1000(1.05)^{40}\\).",
+    "For the second fund, the nominal discount rate is \\(6\\%\\), compounded monthly. The effective monthly discount rate is \\(\\dfrac{0.06}{12}=0.005\\).",
+    "A monthly discount rate of \\(0.005\\) corresponds to a monthly accumulation factor of \\((1-0.005)^{-1}\\).",
+    "Over \\(20\\) years, there are \\(20\\cdot 12=240\\) monthly periods.",
+    "Thus, the accumulated value of the second fund at time \\(20\\) is \\(P(1-0.005)^{-240}\\).",
+    "Since the two accumulated values are equal, \\(1000(1.05)^{40}=P(1-0.005)^{-240}\\).",
+    "Solving for \\(P\\), we get \\(P=1000(1.05)^{40}(1-0.005)^{240}=2114.03\\).",
+    "Let \\(i\\) be the annual effective interest rate earned on the total deposits \\(1000+P\\) over \\(20\\) years.",
+    "At time \\(20\\), the two funds have equal accumulated values, so the total accumulated value is \\(2[1000(1.05)^{40}]\\).",
+    "Therefore, \\((1000+P)(1+i)^{20}=2[1000(1.05)^{40}]\\).",
+    "Substitute \\(P=2114.03\\): \\((1000+2114.03)(1+i)^{20}=2[1000(1.05)^{40}]\\).",
+    "Solving gives \\(i=\\left(\\dfrac{2[1000(1.05)^{40}]}{1000+2114.03}\\right)^{1/20}-1\\).",
+    "Thus, \\(i=0.07836\\)."
+  ],
+  "generalization": "When multiple deposits are made into different funds, first find each accumulated value at the target time. If a nominal interest rate is compounded \\(m\\) times per year, use \\(\\left(1+\\dfrac{i^{(m)}}{m}\\right)^{mt}\\). If a nominal discount rate is compounded \\(m\\) times per year, use \\(\\left(1-\\dfrac{d^{(m)}}{m}\\right)^{-mt}\\).",
+  "answer_text": "The annual effective interest rate earned on the total deposits is approximately \\(\\boxed{0.0784}\\), so the correct choice is E."
+},
+  {
+  "id": 44,
+  "topic": "amount function and accumulation function",
+  "title": "Exercise 44",
+  "statement": "You are given the following amount function: \\(A(t)=t^2+100\\). Suppose \\(\\$50\\) was invested at \\(t=4\\). What would be the accumulated value of the \\(\\$50\\) at \\(t=6\\)?",
+  "choices": [
+    "\\(53.8\\)",
+    "\\(57.2\\)",
+    "\\(58.6\\)",
+    "\\(61.5\\)",
+    "\\(66.0\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the deposit is made at time \\(t=4\\), we do not use \\(A(6)\\) directly.",
+    "Instead, we use the growth factor from time \\(4\\) to time \\(6\\), which is \\(\\dfrac{A(6)}{A(4)}\\).",
+    "Compute \\(A(4)=4^2+100=116\\).",
+    "Compute \\(A(6)=6^2+100=136\\).",
+    "The accumulated value at \\(t=6\\) is \\(50\\cdot \\dfrac{A(6)}{A(4)}\\).",
+    "Substitute the values: \\(50\\cdot \\dfrac{136}{116}=58.6207\\)."
+  ],
+  "generalization": "If a deposit \\(P\\) is made at time \\(s\\) and accumulated to time \\(t\\) under an amount function \\(A(t)\\), then the accumulated value is \\(P\\dfrac{A(t)}{A(s)}\\). The ratio \\(\\dfrac{A(t)}{A(s)}\\) gives the growth factor from time \\(s\\) to time \\(t\\).",
+  "answer_text": "The accumulated value is \\(\\boxed{58.6}\\), so the correct choice is C."
+},
+  {
+  "id": 45,
+  "topic": "effective interest rate",
+  "title": "Exercise 45",
+  "statement": "Gertrude deposits \\(\\$10{,}000\\) in a bank. During the first year, the bank credits an annual effective rate of interest \\(i\\). During the second year, the bank credits an annual effective rate of interest \\(i-5\\%\\). At the end of two years, she has \\(\\$12{,}093.75\\) in the bank. What would Gertrude have in the bank at the end of three years, if the annual effective rate of interest were \\(i+9\\%\\) for each of the three years?",
+  "choices": [
+    "\\(16{,}851\\)",
+    "\\(17{,}196\\)",
+    "\\(17{,}499\\)",
+    "\\(17{,}936\\)",
+    "\\(18{,}113\\)"
+  ],
+  "correct": 3,
+  "solution_steps": [
+    "Set up the equation of value using the first two years: \\(10{,}000(1+i)(1+i-0.05)=12{,}093.75\\).",
+    "Divide both sides by \\(10{,}000\\): \\((1+i)(1+i-0.05)=1.209375\\).",
+    "Rewrite the second factor: \\((1+i)(0.95+i)=1.209375\\).",
+    "Expand: \\(0.95+i+0.95i+i^2=1.209375\\).",
+    "Combine like terms: \\(i^2+1.95i+0.95=1.209375\\).",
+    "Move all terms to one side: \\(i^2+1.95i-0.259375=0\\).",
+    "Using the quadratic formula, the positive solution is \\(i=0.125\\).",
+    "Thus, the original first-year rate is \\(12.5\\%\\).",
+    "The new annual effective rate is \\(i+9\\%=0.125+0.09=0.215\\).",
+    "Accumulate \\(10{,}000\\) for three years at \\(21.5\\%\\): \\(10{,}000(1.215)^3=17{,}936.13\\)."
+  ],
+  "generalization": "When rates vary by year and depend on an unknown parameter, first write an equation of value using the known accumulated amount. Solve for the unknown rate, then apply the required accumulation formula.",
+  "answer_text": "Gertrude would have approximately \\(\\boxed{17{,}936}\\), so the correct choice is D."
+},
+  {
+  "id": 46,
+  "topic": "accumulation function and effective discount rate",
+  "title": "Exercise 46",
+  "statement": "The accumulation function is a function of the number of years elapsed, \\(t\\): \\[a(t)=1+0.04t+0.002t^2.\\] Calculate the equivalent level annual effective discount rate earned during the first \\(15\\) years.",
+  "choices": [
+    "\\(4.5\\%\\)",
+    "\\(4.6\\%\\)",
+    "\\(4.7\\%\\)",
+    "\\(4.8\\%\\)",
+    "\\(4.9\\%\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "First calculate the accumulation function at time \\(15\\).",
+    "Using \\(a(t)=1+0.04t+0.002t^2\\), we get \\(a(15)=1+0.04(15)+0.002(15)^2\\).",
+    "Thus, \\(a(15)=1+0.60+0.45=2.05\\).",
+    "Let \\(d\\) be the equivalent level annual effective discount rate over the first \\(15\\) years.",
+    "Under a level effective discount rate, the accumulation factor over \\(15\\) years is \\((1-d)^{-15}\\).",
+    "Since the accumulated value of \\(1\\) after \\(15\\) years is \\(2.05\\), we set \\(2.05=(1-d)^{-15}\\).",
+    "Equivalently, \\(2.05=\\dfrac{1}{(1-d)^{15}}\\).",
+    "Therefore, \\((1-d)^{15}=\\dfrac{1}{2.05}\\).",
+    "Taking the fifteenth root gives \\(1-d=\\left(\\dfrac{1}{2.05}\\right)^{1/15}\\).",
+    "Thus, \\(d=1-\\left(\\dfrac{1}{2.05}\\right)^{1/15}=0.04673\\)."
+  ],
+  "generalization": "If an accumulation function \\(a(t)\\) is given and we want the equivalent level annual effective discount rate over \\(n\\) years, solve \\(a(n)=(1-d)^{-n}\\). Therefore, \\(d=1-a(n)^{-1/n}\\).",
+  "answer_text": "The equivalent level annual effective discount rate is \\(\\boxed{4.7\\%}\\), so the correct choice is C."
+},
+  {
+  "id": 47,
+  "topic": "simple interest and nominal interest rate",
+  "title": "Exercise 47",
+  "statement": "An investor deposited \\(\\$1{,}000\\) in each of Bank \\(X\\) and Bank \\(Y\\). Bank \\(X\\) credits simple interest at an annual rate of \\(10\\%\\) for the first five years and \\(7\\%\\) thereafter. Bank \\(Y\\) credits interest at an annual nominal rate of \\(5\\%\\), compounded quarterly. The interest credited in the eighth year by Bank \\(Y\\) exceeds the interest credited in the eighth year by Bank \\(X\\) by \\(N\\). Calculate the absolute value of \\(N\\).",
+  "choices": [
+    "\\(0.36\\)",
+    "\\(2.14\\)",
+    "\\(20.00\\)",
+    "\\(56.36\\)",
+    "\\(56.93\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "For Bank \\(X\\), simple interest is credited at an annual rate of \\(7\\%\\) after the first five years.",
+    "Under simple interest, the interest credited each year is based on the original principal.",
+    "Therefore, the interest credited by Bank \\(X\\) during the eighth year is \\(1{,}000(0.07)=70\\).",
+    "For Bank \\(Y\\), the annual nominal interest rate is \\(5\\%\\), compounded quarterly.",
+    "The effective quarterly interest rate is \\(\\dfrac{0.05}{4}=0.0125\\).",
+    "The eighth year is the period from time \\(7\\) to time \\(8\\).",
+    "Since interest is compounded quarterly, time \\(7\\) corresponds to \\(7(4)=28\\) quarters, and time \\(8\\) corresponds to \\(8(4)=32\\) quarters.",
+    "The interest credited by Bank \\(Y\\) during the eighth year is \\(1{,}000(1.0125)^{32}-1{,}000(1.0125)^{28}\\).",
+    "Thus, the interest credited by Bank \\(Y\\) during the eighth year is \\(72.14\\).",
+    "The excess is \\(N=72.14-70=2.14\\)."
+  ],
+  "generalization": "Under simple interest, interest during each year is based on the original principal. Under compound interest, interest during a year is the difference between the accumulated values at the end and beginning of that year.",
+  "answer_text": "The absolute value of \\(N\\) is \\(\\boxed{2.14}\\), so the correct choice is B."
+},
+  {
+  "id": 48,
+  "topic": "nominal interest rate",
+  "title": "Exercise 48",
+  "statement": "Lucas opens a bank account with \\(\\$1{,}000\\) and lets it accumulate at an annual nominal interest rate of \\(6\\%\\) convertible semiannually. Danielle also opens a bank account with \\(\\$1{,}000\\) at the same time as Lucas, but it grows at an annual nominal interest rate of \\(3\\%\\) convertible monthly. For each account, interest is credited only at the end of each interest conversion period. Calculate the number of months required for the amount in Lucas's account to be at least double the amount in Danielle's account.",
+  "choices": [
+    "\\(276\\)",
+    "\\(282\\)",
+    "\\(285\\)",
+    "\\(286\\)",
+    "\\(288\\)"
+  ],
+  "correct": 4,
+  "solution_steps": [
+    "Lucas earns a nominal annual interest rate of \\(6\\%\\) convertible semiannually, so his effective semiannual interest rate is \\(\\dfrac{0.06}{2}=0.03\\).",
+    "Danielle earns a nominal annual interest rate of \\(3\\%\\) convertible monthly, so her effective monthly interest rate is \\(\\dfrac{0.03}{12}=0.0025\\).",
+    "Let \\(n\\) be the number of years required for Lucas's account to be twice Danielle's account, ignoring the final rounding to a conversion date.",
+    "Lucas's accumulated value after \\(n\\) years is \\(1{,}000(1.03)^{2n}\\).",
+    "Danielle's accumulated value after \\(n\\) years is \\(1{,}000(1.0025)^{12n}\\).",
+    "Set Lucas's amount equal to twice Danielle's amount: \\(1{,}000(1.03)^{2n}=2(1{,}000)(1.0025)^{12n}\\).",
+    "Cancel \\(1{,}000\\): \\((1.03)^{2n}=2(1.0025)^{12n}\\).",
+    "Taking natural logarithms gives \\(2n\\ln(1.03)=\\ln 2+12n\\ln(1.0025)\\).",
+    "Rearrange: \\(n\\left[2\\ln(1.03)-12\\ln(1.0025)\\right]=\\ln 2\\).",
+    "Thus, \\(n=\\dfrac{\\ln 2}{2\\ln(1.03)-12\\ln(1.0025)}=23.775\\) years.",
+    "This is \\(23.775(12)=285.3\\) months.",
+    "However, Lucas's interest is credited only at the end of each semiannual conversion period, so Lucas's balance changes only every \\(6\\) months.",
+    "The next multiple of \\(6\\) months after \\(285.3\\) months is \\(288\\) months."
+  ],
+  "generalization": "When interest is credited only at conversion dates, first solve the continuous-looking equation to locate the crossing time, then round up to the next valid conversion date for the account whose credited balance must reach the required level.",
+  "answer_text": "The required number of months is \\(\\boxed{288}\\), so the correct choice is E."
+},
+  {
+  "id": 49,
+  "topic": "amount function and accumulation function",
+  "title": "Exercise 49",
+  "statement": "Consider the following amount function, which is a function of the number of years elapsed, \\(t\\): \\[A(t)=Xt^2+Yt+Z.\\] You are given that \\(A(0)=500\\), \\(A(1)=521\\), and \\(A(4)=596\\). Calculate the future value at time \\(5\\) of \\(400\\) that is deposited at time \\(0\\).",
+  "choices": [
+    "\\(500\\)",
+    "\\(521\\)",
+    "\\(575\\)",
+    "\\(625\\)",
+    "\\(675\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "First use \\(A(0)=500\\) to find \\(Z\\).",
+    "Since \\(A(0)=X(0)^2+Y(0)+Z\\), we get \\(Z=500\\).",
+    "Using \\(A(1)=521\\), we have \\(X+Y+500=521\\), so \\(X+Y=21\\).",
+    "Using \\(A(4)=596\\), we have \\(16X+4Y+500=596\\), so \\(16X+4Y=96\\).",
+    "Divide the second equation by \\(4\\): \\(4X+Y=24\\).",
+    "Now subtract \\(X+Y=21\\) from \\(4X+Y=24\\), giving \\(3X=3\\).",
+    "Thus, \\(X=1\\).",
+    "Substitute \\(X=1\\) into \\(X+Y=21\\), giving \\(Y=20\\).",
+    "Therefore, the amount function is \\(A(t)=t^2+20t+500\\).",
+    "The accumulation function is \\(a(t)=\\dfrac{A(t)}{A(0)}\\).",
+    "Compute \\(A(5)=5^2+20(5)+500=625\\).",
+    "Thus, \\(a(5)=\\dfrac{625}{500}=1.25\\).",
+    "The future value at time \\(5\\) of \\(400\\) deposited at time \\(0\\) is \\(400a(5)=400(1.25)=500\\)."
+  ],
+  "generalization": "If an amount function \\(A(t)\\) is given and a deposit \\(P\\) is made at time \\(0\\), then its accumulated value at time \\(t\\) is \\(P\\dfrac{A(t)}{A(0)}\\).",
+  "answer_text": "The future value is \\(\\boxed{500}\\), so the correct choice is A."
+},
+  {
+  "id": 50,
+  "topic": "nominal interest rate",
+  "title": "Exercise 50",
+  "statement": "An investor deposits \\(100\\) into a bank account at time \\(0\\). The bank credits interest at an annual nominal interest rate of \\(i\\), compounded semiannually. The total amount of interest credited in the twelfth year is twice the amount of interest credited in the fifth year. Calculate \\(i\\).",
+  "choices": [
+    "\\(10.15\\%\\)",
+    "\\(10.24\\%\\)",
+    "\\(10.32\\%\\)",
+    "\\(10.41\\%\\)",
+    "\\(10.48\\%\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "Since \\(i\\) is an annual nominal rate compounded semiannually, the effective semiannual rate is \\(\\dfrac{i}{2}\\).",
+    "Let \\(j\\) be the equivalent annual effective interest rate.",
+    "Then \\(1+j=\\left(1+\\dfrac{i}{2}\\right)^2\\).",
+    "The interest credited during a given year is the account balance at the beginning of the year multiplied by \\(j\\).",
+    "The twelfth year is the period from time \\(11\\) to time \\(12\\), so the interest credited in the twelfth year is \\(A(11)j\\).",
+    "The fifth year is the period from time \\(4\\) to time \\(5\\), so the interest credited in the fifth year is \\(A(4)j\\).",
+    "We are told that the interest credited in the twelfth year is twice the interest credited in the fifth year: \\(A(11)j=2A(4)j\\).",
+    "Since \\(j>0\\), cancel \\(j\\): \\(A(11)=2A(4)\\).",
+    "Using semiannual compounding, \\(A(11)=100\\left(1+\\dfrac{i}{2}\\right)^{22}\\) and \\(A(4)=100\\left(1+\\dfrac{i}{2}\\right)^8\\).",
+    "Thus, \\(100\\left(1+\\dfrac{i}{2}\\right)^{22}=2(100)\\left(1+\\dfrac{i}{2}\\right)^8\\).",
+    "Cancel \\(100\\left(1+\\dfrac{i}{2}\\right)^8\\): \\(\\left(1+\\dfrac{i}{2}\\right)^{14}=2\\).",
+    "Taking the fourteenth root gives \\(1+\\dfrac{i}{2}=2^{1/14}\\).",
+    "Therefore, \\(i=2\\left(2^{1/14}-1\\right)=0.1015\\)."
+  ],
+  "generalization": "For a nominal annual interest rate \\(i\\) compounded semiannually, the account value after \\(t\\) years is \\(A(t)=A(0)\\left(1+\\dfrac{i}{2}\\right)^{2t}\\). Interest credited during year \\(n\\) is the difference between the balances at times \\(n\\) and \\(n-1\\), or equivalently the balance at time \\(n-1\\) multiplied by the equivalent annual effective rate.",
+  "answer_text": "The nominal annual interest rate is \\(\\boxed{10.15\\%}\\), so the correct choice is A."
+},
+  {
+  "id": 51,
+  "topic": "force of interest",
+  "title": "Exercise 51",
+  "statement": "On July \\(1\\), \\(1984\\), a person invested \\(\\$1{,}000\\) in a fund for which the force of interest at time \\(t\\) is given by \\(\\delta_t=\\dfrac{3+2t}{50}\\), where \\(t\\) is the number of years since January \\(1\\), \\(1984\\). Determine the accumulated value of the investment on January \\(1\\), \\(1985\\).",
+  "choices": [
+    "\\(\\$1{,}015.11\\)",
+    "\\(\\$1{,}030.45\\)",
+    "\\(\\$1{,}046.03\\)",
+    "\\(\\$1{,}060.00\\)",
+    "\\(\\$1{,}075.29\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since \\(t\\) is measured from January \\(1\\), \\(1984\\), July \\(1\\), \\(1984\\), corresponds to \\(t=0.5\\).",
+    "January \\(1\\), \\(1985\\), corresponds to \\(t=1\\).",
+    "To accumulate from time \\(0.5\\) to time \\(1\\), use \\(a(0.5,1)=\\exp\\left(\\int_{0.5}^{1}\\delta_s\\,ds\\right)\\).",
+    "Thus, the accumulated value is \\(1000\\exp\\left(\\int_{0.5}^{1}\\dfrac{3+2s}{50}\\,ds\\right)\\).",
+    "Compute the integral: \\(\\int_{0.5}^{1}\\dfrac{3+2s}{50}\\,ds=\\left[\\dfrac{1}{50}(3s+s^2)\\right]_{0.5}^{1}\\).",
+    "Substitute the bounds: \\(\\dfrac{1}{50}\\left[(3(1)+1^2)-(3(0.5)+(0.5)^2)\\right]\\).",
+    "This gives \\(\\dfrac{1}{50}(4-1.75)=\\dfrac{2.25}{50}=0.045\\).",
+    "Therefore, the accumulated value is \\(1000e^{0.045}=1046.03\\)."
+  ],
+  "generalization": "If a deposit \\(P\\) is made at time \\(t_1\\) and the force of interest is \\(\\delta_t\\), then the accumulated value at time \\(t_2\\) is \\(P\\exp\\left(\\int_{t_1}^{t_2}\\delta_t\\,dt\\right)\\).",
+  "answer_text": "The accumulated value is \\(\\boxed{\\$1{,}046.03}\\)."
+},
+  {
+  "id": 52,
+  "topic": "force of interest",
+  "title": "Exercise 52",
+  "statement": "\\(X\\) is deposited into a savings account at time \\(t=0\\). No other amounts are deposited. The force of interest for the fund is \\(\\delta_t=\\dfrac{t}{30}\\). The balance of the fund after \\(10\\) years is \\(12{,}500\\). Determine \\(X\\).",
+  "choices": [
+    "\\(2{,}360.95\\)",
+    "\\(3{,}125.00\\)",
+    "\\(4{,}721.90\\)",
+    "\\(7{,}887.41\\)",
+    "\\(12{,}500.00\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "The deposit \\(X\\) is made at time \\(0\\), and the accumulated value at time \\(10\\) is \\(12{,}500\\).",
+    "Using the force of interest, the accumulation factor from time \\(0\\) to time \\(10\\) is \\(\\exp\\left(\\int_0^{10}\\delta_t\\,dt\\right)\\).",
+    "Therefore, \\(12{,}500=X\\exp\\left(\\int_0^{10}\\dfrac{t}{30}\\,dt\\right)\\).",
+    "Solving for \\(X\\), we get \\(X=12{,}500\\exp\\left(-\\int_0^{10}\\dfrac{t}{30}\\,dt\\right)\\).",
+    "Compute the integral: \\(\\int_0^{10}\\dfrac{t}{30}\\,dt=\\left[\\dfrac{t^2}{60}\\right]_0^{10}\\).",
+    "Thus, \\(\\int_0^{10}\\dfrac{t}{30}\\,dt=\\dfrac{100}{60}=\\dfrac{5}{3}\\).",
+    "Therefore, \\(X=12{,}500e^{-5/3}\\).",
+    "Hence, \\(X=2{,}360.95\\)."
+  ],
+  "generalization": "If a deposit \\(X\\) at time \\(0\\) accumulates to \\(A(n)\\) under force of interest \\(\\delta_t\\), then \\(A(n)=X\\exp\\left(\\int_0^n\\delta_t\\,dt\\right)\\). Therefore, \\(X=A(n)\\exp\\left(-\\int_0^n\\delta_t\\,dt\\right)\\).",
+  "answer_text": "The initial deposit is \\(\\boxed{2{,}360.95}\\)."
+},
+  {
+  "id": 53,
+  "topic": "force of interest",
+  "title": "Exercise 53",
+  "statement": "\\(\\$1{,}000\\) is deposited into a savings account at time \\(t=0\\). No other amounts are deposited. The accumulated amount in the account at time \\(t\\) is given by \\[A(t)=1000\\left(1+\\frac{2t}{35}\\right)^2.\\] Determine the force of interest at time \\(t=32.5\\).",
+  "choices": [
+    "\\(0.02\\)",
+    "\\(0.03\\)",
+    "\\(0.04\\)",
+    "\\(0.05\\)",
+    "\\(0.06\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Recall that the force of interest is \\(\\delta_t=\\dfrac{A'(t)}{A(t)}\\).",
+    "The accumulated amount is \\(A(t)=1000\\left(1+\\dfrac{2t}{35}\\right)^2\\).",
+    "Differentiate using the chain rule: \\(A'(t)=1000\\cdot 2\\left(1+\\dfrac{2t}{35}\\right)\\left(\\dfrac{2}{35}\\right)\\).",
+    "Thus, \\(A'(t)=\\dfrac{4000}{35}\\left(1+\\dfrac{2t}{35}\\right)\\).",
+    "Therefore, \\(\\delta_t=\\dfrac{\\frac{4000}{35}\\left(1+\\frac{2t}{35}\\right)}{1000\\left(1+\\frac{2t}{35}\\right)^2}\\).",
+    "Cancel common factors: \\(\\delta_t=\\dfrac{\\frac{4}{35}}{1+\\frac{2t}{35}}\\).",
+    "Evaluate at \\(t=32.5\\): \\(\\delta_{32.5}=\\dfrac{\\frac{4}{35}}{1+\\frac{2(32.5)}{35}}\\).",
+    "Since \\(2(32.5)=65\\), we have \\(\\delta_{32.5}=\\dfrac{\\frac{4}{35}}{1+\\frac{65}{35}}\\).",
+    "Thus, \\(\\delta_{32.5}=\\dfrac{\\frac{4}{35}}{\\frac{100}{35}}=\\dfrac{4}{100}=0.04\\)."
+  ],
+  "generalization": "Given an amount function \\(A(t)\\), the force of interest at time \\(t\\) is the instantaneous relative growth rate \\(\\delta_t=\\dfrac{A'(t)}{A(t)}\\).",
+  "answer_text": "The force of interest at time \\(t=32.5\\) is \\(\\boxed{0.04}\\)."
+},
+  {
+  "id": 54,
+  "topic": "force of interest",
+  "title": "Exercise 54",
+  "statement": "A deposit of \\(1\\) will accumulate to \\(2.7183\\) in \\(10\\) years with a force of interest \\[\\delta_t=\\begin{cases} kt, & 0<t<5,\\\\ 0.04kt^2, & 5<t\\leq 10. \\end{cases}\\] Determine \\(k\\).",
+  "choices": [
+    "\\(0.0394\\)",
+    "\\(0.0404\\)",
+    "\\(0.0414\\)",
+    "\\(0.0424\\)",
+    "\\(0.0434\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Use the accumulation formula under a force of interest: \\(a(10)=\\exp\\left(\\int_0^{10}\\delta_t\\,dt\\right)\\).",
+    "Since the force of interest is piecewise, split the integral into two parts: \\(\\int_0^{10}\\delta_t\\,dt=\\int_0^5 kt\\,dt+\\int_5^{10}0.04kt^2\\,dt\\).",
+    "Compute the first integral: \\(\\int_0^5 kt\\,dt=k\\left[\\dfrac{t^2}{2}\\right]_0^5=\\dfrac{25}{2}k=12.5k\\).",
+    "Compute the second integral: \\(\\int_5^{10}0.04kt^2\\,dt=0.04k\\left[\\dfrac{t^3}{3}\\right]_5^{10}\\).",
+    "This gives \\(0.04k\\left(\\dfrac{10^3-5^3}{3}\\right)=0.04k\\left(\\dfrac{875}{3}\\right)=\\dfrac{35}{3}k\\).",
+    "Therefore, \\(2.7183=\\exp\\left(12.5k+\\dfrac{35}{3}k\\right)\\).",
+    "Since \\(12.5=\\dfrac{25}{2}\\), the exponent becomes \\(\\dfrac{25}{2}k+\\dfrac{35}{3}k=\\dfrac{145}{6}k\\).",
+    "Thus, \\(2.7183=e^{\\frac{145}{6}k}\\).",
+    "Taking natural logarithms gives \\(\\ln(2.7183)=\\dfrac{145}{6}k\\).",
+    "Solving for \\(k\\), we get \\(k=\\dfrac{6\\ln(2.7183)}{145}=0.0414\\)."
+  ],
+  "generalization": "When the force of interest is piecewise-defined, split the integral over the relevant intervals. The accumulation factor over \\([0,n]\\) is \\(\\exp\\left(\\int_0^n\\delta_t\\,dt\\right)\\).",
+  "answer_text": "The value of \\(k\\) is \\(\\boxed{0.0414}\\)."
+},
+  {
+  "id": 55,
+  "topic": "force of interest",
+  "title": "Exercise 55",
+  "statement": "Given two accumulation functions: \\(a_1(t)=1+0.08t\\) and \\(a_2(t)=1.05^t\\). At what time \\(t\\) will the forces of interest be equal for the two functions?",
+  "choices": [
+    "\\(6\\)",
+    "\\(7\\)",
+    "\\(8\\)",
+    "\\(9\\)",
+    "\\(10\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Use the definition of force of interest: \\(\\delta_t=\\dfrac{a'(t)}{a(t)}\\).",
+    "For \\(a_1(t)=1+0.08t\\), we have \\(a_1'(t)=0.08\\).",
+    "Thus, \\(\\delta_{1,t}=\\dfrac{0.08}{1+0.08t}\\).",
+    "For \\(a_2(t)=1.05^t\\), we have \\(a_2'(t)=1.05^t\\ln(1.05)\\).",
+    "Thus, \\(\\delta_{2,t}=\\dfrac{1.05^t\\ln(1.05)}{1.05^t}=\\ln(1.05)\\).",
+    "Set the two forces of interest equal: \\(\\dfrac{0.08}{1+0.08t}=\\ln(1.05)\\).",
+    "Solve for \\(t\\): \\(1+0.08t=\\dfrac{0.08}{\\ln(1.05)}\\).",
+    "Thus, \\(t=\\dfrac{\\frac{0.08}{\\ln(1.05)}-1}{0.08}\\).",
+    "Therefore, \\(t=7.99\\), which is approximately \\(8\\)."
+  ],
+  "generalization": "To compare the forces of interest of two accumulation functions, compute \\(\\delta_t=\\dfrac{a'(t)}{a(t)}\\) for each function, then set the two expressions equal and solve for \\(t\\).",
+  "answer_text": "The forces of interest are equal at approximately \\(\\boxed{t=8}\\)."
+},
+  {
+  "id": 56,
+  "topic": "force of interest",
+  "title": "Exercise 56",
+  "statement": "A fund earns interest at a force of interest \\(\\delta_t=kt\\). A deposit of \\(\\$100\\) at time \\(t=0\\) will grow to \\(\\$250\\) at the end of \\(5\\) years. Determine \\(k\\).",
+  "choices": [
+    "\\(0.08\\ln(1.5)\\)",
+    "\\(0.06\\)",
+    "\\(0.08\\ln(2.5)\\)",
+    "\\(0.08\\)",
+    "\\(\\ln(2.5)\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Recall that the accumulation factor for a given force of interest is \\(\\exp\\left(\\int \\delta_t\\,dt\\right)\\).",
+    "Since the deposit is made at time \\(0\\) and accumulated to time \\(5\\), we have \\(100\\exp\\left(\\int_0^5 kt\\,dt\\right)=250\\).",
+    "Compute the integral: \\(\\int_0^5 kt\\,dt=\\left[\\dfrac{kt^2}{2}\\right]_0^5\\).",
+    "Thus, \\(\\int_0^5 kt\\,dt=\\dfrac{k(5)^2}{2}=12.5k\\).",
+    "Therefore, \\(100\\exp(12.5k)=250\\).",
+    "Divide both sides by \\(100\\): \\(\\exp(12.5k)=2.5\\).",
+    "Taking natural logarithms gives \\(12.5k=\\ln(2.5)\\).",
+    "Hence, \\(k=\\dfrac{\\ln(2.5)}{12.5}\\).",
+    "Since \\(\\dfrac{1}{12.5}=0.08\\), we obtain \\(k=0.08\\ln(2.5)\\)."
+  ],
+  "generalization": "If a deposit \\(P\\) accumulates to \\(F\\) over \\([0,n]\\) under force of interest \\(\\delta_t\\), then \\(F=P\\exp\\left(\\int_0^n \\delta_t\\,dt\\right)\\).",
+  "answer_text": "The value of \\(k\\) is \\(\\boxed{0.08\\ln(2.5)}\\), so the correct choice is C."
+},
+  {
+  "id": 57,
+  "topic": "force of interest and effective interest rate",
+  "title": "Exercise 57",
+  "statement": "In Fund \\(X\\), money accumulates at a force of interest \\(\\delta_t=0.01t+0.1\\), for \\(0\\leq t\\leq 20\\). In Fund \\(Y\\), money accumulates at an annual effective interest rate \\(i\\). An amount of \\(1\\) is invested in each of Fund \\(X\\) and Fund \\(Y\\) for \\(20\\) years. The value of Fund \\(X\\) at the end of \\(20\\) years is equal to the value of Fund \\(Y\\) at the end of \\(20\\) years. Calculate the value of Fund \\(Y\\) at the end of \\(1.5\\) years.",
+  "choices": [
+    "\\(e^{0.1}\\)",
+    "\\(e^{0.2}\\)",
+    "\\(e^{0.3}\\)",
+    "\\(e^{0.4}\\)",
+    "\\(e^{0.5}\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "First calculate the accumulated value of Fund \\(X\\) after \\(20\\) years.",
+    "Since Fund \\(X\\) accumulates with force of interest \\(\\delta_t=0.01t+0.1\\), its accumulation factor over \\(20\\) years is \\(\\exp\\left(\\int_0^{20}(0.01t+0.1)\\,dt\\right)\\).",
+    "Compute the integral: \\(\\int_0^{20}(0.01t+0.1)\\,dt=\\left[0.005t^2+0.1t\\right]_0^{20}\\).",
+    "Thus, \\(\\left[0.005t^2+0.1t\\right]_0^{20}=0.005(20)^2+0.1(20)\\).",
+    "This equals \\(0.005(400)+2=2+2=4\\).",
+    "Therefore, the value of Fund \\(X\\) after \\(20\\) years is \\(e^4\\).",
+    "Fund \\(Y\\) accumulates at an annual effective interest rate \\(i\\), so its value after \\(20\\) years is \\((1+i)^{20}\\).",
+    "Since the two fund values are equal at time \\(20\\), we have \\((1+i)^{20}=e^4\\).",
+    "The value of Fund \\(Y\\) after \\(1.5\\) years is \\((1+i)^{1.5}\\).",
+    "Rewrite this as \\((1+i)^{1.5}=\\left((1+i)^{20}\\right)^{1.5/20}\\).",
+    "Substitute \\((1+i)^{20}=e^4\\): \\((1+i)^{1.5}=(e^4)^{1.5/20}\\).",
+    "Thus, \\((1+i)^{1.5}=e^{4(1.5/20)}=e^{0.3}\\)."
+  ],
+  "generalization": "When two funds have equal accumulated values at a given time, use that equality to determine the equivalent growth factor. A force of interest \\(\\delta_t\\) gives accumulation \\(\\exp\\left(\\int \\delta_t\\,dt\\right)\\), while a constant annual effective rate \\(i\\) gives accumulation \\((1+i)^t\\).",
+  "answer_text": "The value of Fund \\(Y\\) at the end of \\(1.5\\) years is \\(\\boxed{e^{0.3}}\\), so the correct choice is C."
+},
+  {
+  "id": 58,
+  "topic": "force of interest and present value",
+  "title": "Exercise 58",
+  "statement": "At a force of interest \\(\\delta=0.05\\), the following payments have the same present value: (i) \\(X\\) at the end of year \\(5\\) plus \\(2X\\) at the end of year \\(10\\); (ii) \\(Y\\) at the end of year \\(14\\). Calculate \\(\\dfrac{Y}{X}\\).",
+  "choices": [
+    "\\(3.7945\\)",
+    "\\(3.9120\\)",
+    "\\(4.0111\\)",
+    "\\(4.1208\\)",
+    "\\(4.2789\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the force of interest is constant, the discount factor for a payment made at time \\(t\\) is \\(e^{-\\delta t}\\).",
+    "Here, \\(\\delta=0.05\\).",
+    "The present value of the first payment stream is \\(Xe^{-0.05(5)}+2Xe^{-0.05(10)}\\).",
+    "The present value of the second payment stream is \\(Ye^{-0.05(14)}\\).",
+    "Set the two present values equal: \\(Xe^{-0.05(5)}+2Xe^{-0.05(10)}=Ye^{-0.05(14)}\\).",
+    "This becomes \\(Xe^{-0.25}+2Xe^{-0.50}=Ye^{-0.70}\\).",
+    "Factor out \\(X\\): \\(X\\left(e^{-0.25}+2e^{-0.50}\\right)=Ye^{-0.70}\\).",
+    "Divide both sides by \\(Xe^{-0.70}\\): \\(\\dfrac{Y}{X}=\\dfrac{e^{-0.25}+2e^{-0.50}}{e^{-0.70}}\\).",
+    "Simplify: \\(\\dfrac{Y}{X}=e^{0.45}+2e^{0.20}\\).",
+    "Therefore, \\(\\dfrac{Y}{X}=4.0111\\)."
+  ],
+  "generalization": "Under a constant force of interest \\(\\delta\\), the present value of a payment \\(C\\) made at time \\(t\\) is \\(Ce^{-\\delta t}\\). To compare payment streams, discount each cash flow to the same valuation date and equate present values.",
+  "answer_text": "The ratio is \\(\\boxed{\\dfrac{Y}{X}=4.0111}\\), so the correct choice is C."
+},
+  {
+  "id": 59,
+  "topic": "force of interest and simple interest",
+  "title": "Exercise 59",
+  "statement": "On January \\(1\\), \\(1997\\), Kelly deposits \\(X\\) into a bank account. The account is credited with simple interest at a rate of \\(10\\%\\) per year. On the same date, Tara deposits \\(X\\) into a different bank account. The account is credited interest using a force of interest \\(\\delta_t=\\dfrac{2t}{t^2+k}\\). From the end of the \\(4\\)th year until the end of the \\(8\\)th year, both accounts earn the same dollar amount of interest. Calculate \\(k\\).",
+  "choices": [
+    "\\(80\\)",
+    "\\(100\\)",
+    "\\(110\\)",
+    "\\(120\\)",
+    "\\(140\\)"
+  ],
+  "correct": 3,
+  "solution_steps": [
+    "For Kelly, the account earns simple interest at a rate of \\(10\\%\\), so the accumulation function is \\(a_K(t)=1+0.1t\\).",
+    "For Tara, the force of interest is \\(\\delta_t=\\dfrac{2t}{t^2+k}\\).",
+    "We need an accumulation function \\(a_T(t)\\) such that \\(\\dfrac{a_T'(t)}{a_T(t)}=\\dfrac{2t}{t^2+k}\\).",
+    "Since \\(\\dfrac{d}{dt}(t^2+k)=2t\\), we have \\(\\int \\dfrac{2t}{t^2+k}\\,dt=\\ln(t^2+k)\\).",
+    "Thus, \\(a_T(t)=C(t^2+k)\\).",
+    "Because an accumulation function must satisfy \\(a_T(0)=1\\), we get \\(1=Ck\\), so \\(C=\\dfrac{1}{k}\\).",
+    "Therefore, \\(a_T(t)=\\dfrac{t^2+k}{k}=\\dfrac{t^2}{k}+1\\).",
+    "The dollar amount of interest earned from the end of year \\(4\\) to the end of year \\(8\\) is equal for both accounts.",
+    "Since both deposits are \\(X\\), cancel \\(X\\) and set \\(a_K(8)-a_K(4)=a_T(8)-a_T(4)\\).",
+    "For Kelly, \\(a_K(8)-a_K(4)=(1+0.1(8))-(1+0.1(4))=1.8-1.4=0.4\\).",
+    "For Tara, \\(a_T(8)-a_T(4)=\\left(\\dfrac{8^2}{k}+1\\right)-\\left(\\dfrac{4^2}{k}+1\\right)=\\dfrac{64}{k}-\\dfrac{16}{k}=\\dfrac{48}{k}\\).",
+    "Set the two equal: \\(0.4=\\dfrac{48}{k}\\).",
+    "Solving gives \\(k=\\dfrac{48}{0.4}=120\\)."
+  ],
+  "generalization": "When comparing dollar amounts of interest over an interval, compare the change in accumulated value over that interval. If the same amount is deposited in both funds, the common deposit can be canceled.",
+  "answer_text": "The value of \\(k\\) is \\(\\boxed{120}\\)."
+},
+  {
+  "id": 60,
+  "topic": "force of interest and effective discount rate",
+  "title": "Exercise 60",
+  "statement": "If the force of interest is \\(\\delta_t=\\dfrac{2t}{1+t^2}\\), what is the effective rate of discount during year \\(4\\)?",
+  "choices": [
+    "Less than \\(0.43\\)",
+    "At least \\(0.43\\), but less than \\(0.53\\)",
+    "At least \\(0.53\\), but less than \\(0.63\\)",
+    "At least \\(0.63\\), but less than \\(0.73\\)",
+    "At least \\(0.73\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "Use the definition of force of interest: \\(\\delta_t=\\dfrac{a'(t)}{a(t)}\\).",
+    "Since \\(\\delta_t=\\dfrac{2t}{1+t^2}\\), observe that the numerator \\(2t\\) is the derivative of the denominator \\(1+t^2\\).",
+    "Therefore, the accumulation function is \\(a(t)=1+t^2\\).",
+    "Indeed, \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{2t}{1+t^2}\\).",
+    "Year \\(4\\) is the period from time \\(3\\) to time \\(4\\).",
+    "Compute \\(a(3)=1+3^2=10\\).",
+    "Compute \\(a(4)=1+4^2=17\\).",
+    "The effective rate of discount during year \\(4\\) is the interest earned during the period divided by the final value.",
+    "Thus, \\(d_4=\\dfrac{a(4)-a(3)}{a(4)}\\).",
+    "Substitute the values: \\(d_4=\\dfrac{17-10}{17}=\\dfrac{7}{17}=0.4118\\)."
+  ],
+  "generalization": "Given an accumulation function \\(a(t)\\), the effective rate of discount during year \\(n\\) is \\(d_n=\\dfrac{a(n)-a(n-1)}{a(n)}\\). If a force of interest is given, first recover or identify the accumulation function using \\(\\delta_t=\\dfrac{a'(t)}{a(t)}\\).",
+  "answer_text": "The effective rate of discount during year \\(4\\) is \\(\\boxed{0.4118}\\), which is less than \\(0.43\\). The correct choice is A."
+},
+  {
+  "id": 61,
+  "topic": "force of interest and nominal interest rate",
+  "title": "Exercise 61",
+  "statement": "Fund \\(X\\) starts with \\(\\$1{,}000\\) and accumulates with a force of interest \\(\\delta_t=\\dfrac{1}{15-t}\\), for \\(0\\leq t\\leq 15\\). Fund \\(Y\\) starts with \\(\\$1{,}000\\) and accumulates with an interest rate of \\(8\\%\\) per annum compounded semiannually for the first three years and an effective interest rate of \\(i\\) per annum thereafter. Fund \\(X\\) equals Fund \\(Y\\) at the end of four years. Calculate \\(i\\).",
+  "choices": [
+    "\\(0.0750\\)",
+    "\\(0.0775\\)",
+    "\\(0.0800\\)",
+    "\\(0.0825\\)",
+    "\\(0.0850\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "For Fund \\(X\\), the force of interest is \\(\\delta_t=\\dfrac{1}{15-t}\\).",
+    "The accumulation function is \\(a_X(t)=\\exp\\left(\\int_0^t \\dfrac{1}{15-s}\\,ds\\right)\\).",
+    "Compute the integral: \\(\\int_0^t \\dfrac{1}{15-s}\\,ds=\\left[-\\ln(15-s)\\right]_0^t\\).",
+    "Thus, \\(\\int_0^t \\dfrac{1}{15-s}\\,ds=-\\ln(15-t)+\\ln(15)=\\ln\\left(\\dfrac{15}{15-t}\\right)\\).",
+    "Therefore, \\(a_X(t)=\\dfrac{15}{15-t}=\\left(1-\\dfrac{t}{15}\\right)^{-1}\\).",
+    "At time \\(4\\), Fund \\(X\\) has value \\(1000a_X(4)=1000\\left(1-\\dfrac{4}{15}\\right)^{-1}\\).",
+    "This equals \\(1000\\left(\\dfrac{15}{11}\\right)=1363.64\\).",
+    "For Fund \\(Y\\), the first three years use a nominal annual interest rate of \\(8\\%\\), compounded semiannually.",
+    "The effective semiannual interest rate is \\(\\dfrac{0.08}{2}=0.04\\).",
+    "Over three years, there are \\(3\\cdot 2=6\\) semiannual periods.",
+    "Thus, after three years, Fund \\(Y\\) has value \\(1000(1.04)^6\\).",
+    "During the fourth year, Fund \\(Y\\) earns an annual effective interest rate \\(i\\), so its value at time \\(4\\) is \\(1000(1.04)^6(1+i)\\).",
+    "Since Fund \\(X\\) equals Fund \\(Y\\) at time \\(4\\), set \\(1000(1.04)^6(1+i)=1000\\left(\\dfrac{15}{11}\\right)\\).",
+    "Cancel \\(1000\\): \\((1.04)^6(1+i)=\\dfrac{15}{11}\\).",
+    "Solving gives \\(i=\\dfrac{15}{11(1.04)^6}-1\\).",
+    "Therefore, \\(i=0.0777\\)."
+  ],
+  "generalization": "When a fund accumulates under a force of interest \\(\\delta_t\\), its accumulation factor over \\([0,t]\\) is \\(\\exp\\left(\\int_0^t \\delta_s\\,ds\\right)\\). When comparing funds, compute each accumulated value at the same time and set them equal.",
+  "answer_text": "The annual effective interest rate is approximately \\(\\boxed{0.0777}\\), so the closest answer is \\(\\boxed{0.0775}\\)."
+},
+  {
+  "id": 62,
+  "topic": "force of interest and accumulation function",
+  "title": "Exercise 62",
+  "statement": "A fund starts with a zero balance at time \\(0\\). The fund accumulates with a varying force of interest \\(\\delta_t=\\dfrac{2t}{t^2+1}\\), for \\(t>0\\). A deposit of \\(\\$100{,}000\\) is made at time \\(2\\). Calculate the number of years from the time of deposit for the fund to double.",
+  "choices": [
+    "\\(0.5\\)",
+    "\\(1.0\\)",
+    "\\(1.5\\)",
+    "\\(2.0\\)",
+    "\\(2.5\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The force of interest is \\(\\delta_t=\\dfrac{2t}{t^2+1}\\).",
+    "Notice that the numerator \\(2t\\) is the derivative of the denominator \\(t^2+1\\).",
+    "Therefore, the accumulation function is \\(a(t)=t^2+1\\).",
+    "Indeed, \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{2t}{t^2+1}=\\delta_t\\).",
+    "The deposit is made at time \\(2\\), so we accumulate from time \\(2\\) to an unknown time \\(t\\).",
+    "The accumulation factor from time \\(2\\) to time \\(t\\) is \\(\\dfrac{a(t)}{a(2)}\\).",
+    "We want the deposit to double, so \\(100{,}000\\dfrac{a(t)}{a(2)}=200{,}000\\).",
+    "Cancel \\(100{,}000\\): \\(\\dfrac{a(t)}{a(2)}=2\\).",
+    "Since \\(a(2)=2^2+1=5\\), we get \\(\\dfrac{t^2+1}{5}=2\\).",
+    "Thus, \\(t^2+1=10\\).",
+    "Therefore, \\(t^2=9\\), so \\(t=3\\).",
+    "The fund doubles at time \\(3\\). Since the deposit was made at time \\(2\\), the number of years from the time of deposit is \\(3-2=1\\)."
+  ],
+  "generalization": "If a deposit is made at time \\(s\\) and grows under an accumulation function \\(a(t)\\), then its value at time \\(t\\) is the deposit multiplied by \\(\\dfrac{a(t)}{a(s)}\\).",
+  "answer_text": "The fund doubles \\(\\boxed{1.0}\\) year after the deposit, so the correct choice is B."
+},
+  {
+  "id": 63,
+  "topic": "nominal discount rate and force of interest",
+  "title": "Exercise 63",
+  "statement": "A deposit of \\(100\\) is made into a fund at time \\(t=0\\). The fund pays interest at a nominal annual rate of discount \\(d\\), compounded quarterly, for the first two years. Beginning at time \\(t=2\\), interest is credited at a force of interest \\(\\delta_t=\\dfrac{1}{t+1}\\). At time \\(t=5\\), the accumulated value of the fund is \\(260\\). Calculate \\(d\\).",
+  "choices": [
+    "\\(12.7\\%\\)",
+    "\\(12.9\\%\\)",
+    "\\(13.1\\%\\)",
+    "\\(13.3\\%\\)",
+    "\\(13.5\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "For the first two years, the fund earns a nominal annual rate of discount \\(d\\), compounded quarterly.",
+    "The effective quarterly discount rate is \\(\\dfrac{d}{4}\\).",
+    "There are \\(2\\cdot 4=8\\) quarters in the first two years.",
+    "Thus, the accumulation factor for the first two years is \\(\\left(1-\\dfrac{d}{4}\\right)^{-8}\\).",
+    "Beginning at time \\(t=2\\), the force of interest is \\(\\delta_t=\\dfrac{1}{t+1}\\).",
+    "This corresponds to the accumulation function \\(a(t)=t+1\\), since \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{1}{t+1}\\).",
+    "The accumulation factor from time \\(2\\) to time \\(5\\) is \\(\\dfrac{a(5)}{a(2)}\\).",
+    "Compute \\(a(2)=2+1=3\\).",
+    "Compute \\(a(5)=5+1=6\\).",
+    "Therefore, \\(\\dfrac{a(5)}{a(2)}=\\dfrac{6}{3}=2\\).",
+    "Set up the accumulated value equation: \\(100\\left(1-\\dfrac{d}{4}\\right)^{-8}\\dfrac{a(5)}{a(2)}=260\\).",
+    "Substitute \\(\\dfrac{a(5)}{a(2)}=2\\): \\(100\\left(1-\\dfrac{d}{4}\\right)^{-8}(2)=260\\).",
+    "Thus, \\(\\left(1-\\dfrac{d}{4}\\right)^{-8}=1.3\\).",
+    "Taking both sides to the power \\(-1/8\\), we get \\(1-\\dfrac{d}{4}=1.3^{-1/8}\\).",
+    "Therefore, \\(d=4\\left(1-1.3^{-1/8}\\right)\\).",
+    "Hence, \\(d=0.12905\\), or approximately \\(12.9\\%\\)."
+  ],
+  "generalization": "When a fund uses different interest measures over different time intervals, multiply the accumulation factors for each interval. A nominal discount rate compounded quarterly gives accumulation factor \\(\\left(1-\\dfrac{d}{4}\\right)^{-4t}\\), while a force of interest \\(\\delta_t\\) gives accumulation factor \\(\\exp\\left(\\int \\delta_t\\,dt\\right)\\).",
+  "answer_text": "The nominal annual rate of discount is approximately \\(\\boxed{12.9\\%}\\), so the correct choice is B."
+},
+  {
+  "id": 64,
+  "topic": "equations of value",
+  "title": "Exercise 64",
+  "statement": "Brown will receive \\(1000\\) at the end of \\(10\\) years. In return, he will pay \\(200\\) now and another payment \\(X\\) in \\(5\\) years. At a \\(10\\%\\) annual effective interest rate, what should the size of Brown's second payment be?",
+  "choices": [
+    "\\(250.00\\)",
+    "\\(275.50\\)",
+    "\\(298.82\\)",
+    "\\(322.10\\)",
+    "\\(350.00\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Choose time \\(5\\) as the comparison date.",
+    "The payment of \\(200\\) at time \\(0\\) accumulates for \\(5\\) years, so its value at time \\(5\\) is \\(200(1.10)^5\\).",
+    "The payment \\(X\\) is already at time \\(5\\), so it remains \\(X\\).",
+    "The payment of \\(1000\\) at time \\(10\\) is discounted back \\(5\\) years to time \\(5\\), giving \\(1000v_{0.10}^5\\).",
+    "Since \\(v_{0.10}=\\dfrac{1}{1.10}\\), we have \\(v_{0.10}^5=(1.10)^{-5}\\).",
+    "The equation of value at time \\(5\\) is \\(200(1.10)^5+X=1000(1.10)^{-5}\\).",
+    "Solving for \\(X\\), we get \\(X=1000(1.10)^{-5}-200(1.10)^5\\).",
+    "Therefore, \\(X=298.82\\)."
+  ],
+  "generalization": "An equation of value can be written at any comparison date under compound interest. The key is to move every cash flow to the same date before comparing them.",
+  "answer_text": "Brown's second payment should be \\(\\boxed{298.82}\\), so the correct choice is C."
+},
+  {
+  "id": 65,
+  "topic": "equations of value and force of interest",
+  "title": "Exercise 65",
+  "statement": "You are given \\(\\delta_t=\\dfrac{2}{1+t}\\). A payment of \\(300\\) at the end of \\(3\\) years and \\(600\\) at the end of \\(6\\) years has the same present value as a payment of \\(200\\) at the end of \\(2\\) years and \\(X\\) at the end of \\(5\\) years. Calculate \\(X\\).",
+  "choices": [
+    "\\(295.82\\)",
+    "\\(305.82\\)",
+    "\\(315.82\\)",
+    "\\(325.82\\)",
+    "\\(335.82\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Since the problem states that the two payment streams have the same present value, the comparison date is time \\(0\\).",
+    "First find the accumulation function from the force of interest: \\(a(t)=\\exp\\left(\\int_0^t \\delta_s\\,ds\\right)\\).",
+    "Substitute \\(\\delta_s=\\dfrac{2}{1+s}\\): \\(a(t)=\\exp\\left(\\int_0^t \\dfrac{2}{1+s}\\,ds\\right)\\).",
+    "Compute the integral: \\(\\int_0^t \\dfrac{2}{1+s}\\,ds=\\left[2\\ln(1+s)\\right]_0^t\\).",
+    "Thus, \\(a(t)=\\exp(2\\ln(1+t))=(1+t)^2\\).",
+    "The present value of a payment at time \\(t\\) is found by dividing by \\(a(t)\\).",
+    "Write the equation of value at time \\(0\\): \\(\\dfrac{300}{a(3)}+\\dfrac{600}{a(6)}=\\dfrac{200}{a(2)}+\\dfrac{X}{a(5)}\\).",
+    "Since \\(a(t)=(1+t)^2\\), we have \\(a(2)=9\\), \\(a(3)=16\\), \\(a(5)=36\\), and \\(a(6)=49\\).",
+    "Substitute these values: \\(\\dfrac{300}{16}+\\dfrac{600}{49}=\\dfrac{200}{9}+\\dfrac{X}{36}\\).",
+    "Solve for \\(X\\): \\(X=36\\left(\\dfrac{300}{16}+\\dfrac{600}{49}-\\dfrac{200}{9}\\right)\\).",
+    "Therefore, \\(X=315.82\\)."
+  ],
+  "generalization": "When a force of interest is given, first derive the accumulation function \\(a(t)\\). Then discount each payment to the comparison date using the appropriate factor. If the problem says present value, the comparison date is time \\(0\\).",
+  "answer_text": "The value of \\(X\\) is \\(\\boxed{315.82}\\), so the correct choice is C."
+},
+  {
+  "id": 66,
+  "topic": "equations of value and nominal discount rate",
+  "title": "Exercise 66",
+  "statement": "Harry borrows \\(3500\\) from Mary. He agrees to repay the loan with annual payments, made at the end of each year, of \\(500\\), \\(1000\\), \\(1500\\), and \\(X\\). Mary charges Harry a rate of discount of \\(10\\%\\) convertible four times per year. Determine the amount of the final payment.",
+  "choices": [
+    "\\(1626.12\\)",
+    "\\(1656.12\\)",
+    "\\(1686.12\\)",
+    "\\(1716.12\\)",
+    "\\(1746.12\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The nominal annual rate of discount is \\(10\\%\\), convertible four times per year.",
+    "Therefore, the effective discount rate per quarter is \\(\\dfrac{0.10}{4}=0.025\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "The payment of \\(500\\) at the end of year \\(1\\) is discounted for \\(4\\) quarters, giving \\(500(1-0.025)^4\\).",
+    "The payment of \\(1000\\) at the end of year \\(2\\) is discounted for \\(8\\) quarters, giving \\(1000(1-0.025)^8\\).",
+    "The payment of \\(1500\\) at the end of year \\(3\\) is discounted for \\(12\\) quarters, giving \\(1500(1-0.025)^{12}\\).",
+    "The final payment \\(X\\) at the end of year \\(4\\) is discounted for \\(16\\) quarters, giving \\(X(1-0.025)^{16}\\).",
+    "Write the equation of value at time \\(0\\): \\(3500=500(1-0.025)^4+1000(1-0.025)^8+1500(1-0.025)^{12}+X(1-0.025)^{16}\\).",
+    "Solve for \\(X\\): \\(X=\\dfrac{3500-500(1-0.025)^4-1000(1-0.025)^8-1500(1-0.025)^{12}}{(1-0.025)^{16}}\\).",
+    "Therefore, \\(X=1686.12\\)."
+  ],
+  "generalization": "For a nominal annual discount rate \\(d^{(m)}\\) convertible \\(m\\) times per year, the effective discount rate per conversion period is \\(\\dfrac{d^{(m)}}{m}\\). A payment made after \\(n\\) conversion periods has present value \\(C\\left(1-\\dfrac{d^{(m)}}{m}\\right)^n\\).",
+  "answer_text": "The final payment is \\(\\boxed{1686.12}\\), so the correct choice is C."
+},
+  {
+  "id": 67,
+  "topic": "equations of value and force of interest",
+  "title": "Exercise 67",
+  "statement": "Peter deposits \\(400\\) into a bank account at time \\(t=0\\). During the first year, the bank credits interest at a nominal rate of \\(10\\%\\) compounded semiannually. Peter makes an additional deposit of \\(42\\) into his bank account at time \\(t=1\\). During the second year, the bank credits interest at a force of interest \\(\\delta_t=\\dfrac{1}{k+t}\\). The total amount in Peter's account at time \\(t=2\\) is \\(552\\). Calculate \\(k\\).",
+  "choices": [
+    "\\(5\\)",
+    "\\(6\\)",
+    "\\(7\\)",
+    "\\(8\\)",
+    "\\(9\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "During the first year, the nominal annual interest rate is \\(10\\%\\), compounded semiannually.",
+    "Therefore, the effective semiannual rate is \\(\\dfrac{0.10}{2}=0.05\\).",
+    "The initial deposit of \\(400\\) accumulates to time \\(1\\) as \\(400(1.05)^2=441\\).",
+    "At time \\(1\\), Peter deposits an additional \\(42\\), so the balance just after time \\(1\\) is \\(441+42=483\\).",
+    "Now we need the accumulation factor from time \\(1\\) to time \\(2\\).",
+    "Method 1: Use the integral of the force of interest.",
+    "The accumulation factor is \\(\\exp\\left(\\int_1^2 \\dfrac{1}{k+t}\\,dt\\right)\\).",
+    "Compute the integral: \\(\\int_1^2 \\dfrac{1}{k+t}\\,dt=\\left[\\ln(k+t)\\right]_1^2\\).",
+    "Thus, the integral is \\(\\ln(k+2)-\\ln(k+1)\\).",
+    "Therefore, the accumulation factor is \\(\\exp(\\ln(k+2)-\\ln(k+1))=\\dfrac{k+2}{k+1}\\).",
+    "Method 2: Use the accumulation function.",
+    "Since \\(\\delta_t=\\dfrac{1}{k+t}\\), an accumulation function is \\(a(t)=1+\\dfrac{t}{k}=\\dfrac{k+t}{k}\\).",
+    "Indeed, \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{\\frac{1}{k}}{1+\\frac{t}{k}}=\\dfrac{1}{k+t}=\\delta_t\\).",
+    "The accumulation factor from time \\(1\\) to time \\(2\\) is \\(\\dfrac{a(2)}{a(1)}\\).",
+    "Now \\(a(1)=\\dfrac{k+1}{k}\\) and \\(a(2)=\\dfrac{k+2}{k}\\).",
+    "Thus, \\(\\dfrac{a(2)}{a(1)}=\\dfrac{\\frac{k+2}{k}}{\\frac{k+1}{k}}=\\dfrac{k+2}{k+1}\\).",
+    "Both methods give the same accumulation factor: \\(a(1,2)=\\dfrac{k+2}{k+1}\\).",
+    "The balance at time \\(2\\) is \\(552\\), so \\(483\\left(\\dfrac{k+2}{k+1}\\right)=552\\).",
+    "Hence, \\(\\dfrac{k+2}{k+1}=\\dfrac{552}{483}=\\dfrac{8}{7}\\).",
+    "Cross-multiply: \\(7(k+2)=8(k+1)\\).",
+    "Thus, \\(7k+14=8k+8\\), so \\(k=6\\)."
+  ],
+  "generalization": "When a force of interest is given over an interval, the accumulation factor can be found either by integrating the force, \\(\\exp\\left(\\int_{t_1}^{t_2}\\delta_t\\,dt\\right)\\), or by first identifying the accumulation function and using \\(\\dfrac{a(t_2)}{a(t_1)}\\). Both methods must give the same result.",
+  "answer_text": "The value of \\(k\\) is \\(\\boxed{6}\\), so the correct choice is B."
+},
+  {
+  "id": 68,
+  "topic": "equations of value and nominal interest rate",
+  "title": "Exercise 68",
+  "statement": "A loan of \\(1000\\) is made at an interest rate of \\(12\\%\\) compounded quarterly. The loan is to be repaid with three payments: \\(400\\) at the end of the first year, \\(800\\) at the end of the fifth year, and the balance \\(X\\) at the end of the tenth year. Calculate the amount of the final payment.",
+  "choices": [
+    "\\(587\\)",
+    "\\(658\\)",
+    "\\(737\\)",
+    "\\(777\\)",
+    "\\(812\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "The nominal annual interest rate is \\(12\\%\\), compounded quarterly.",
+    "Therefore, the effective quarterly interest rate is \\(\\dfrac{0.12}{4}=0.03\\).",
+    "Let \\(v_{0.03}=\\dfrac{1}{1.03}\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "The payment of \\(400\\) at the end of year \\(1\\) is discounted for \\(4\\) quarters, giving \\(400v_{0.03}^4\\).",
+    "The payment of \\(800\\) at the end of year \\(5\\) is discounted for \\(20\\) quarters, giving \\(800v_{0.03}^{20}\\).",
+    "The final payment \\(X\\) at the end of year \\(10\\) is discounted for \\(40\\) quarters, giving \\(Xv_{0.03}^{40}\\).",
+    "Write the equation of value at time \\(0\\): \\(1000=400v_{0.03}^{4}+800v_{0.03}^{20}+Xv_{0.03}^{40}\\).",
+    "Solving for \\(X\\), we get \\(X=\\dfrac{1000-400v_{0.03}^{4}-800v_{0.03}^{20}}{v_{0.03}^{40}}\\).",
+    "Substitute \\(v_{0.03}=\\dfrac{1}{1.03}\\).",
+    "Thus, \\(X=657.84\\), which rounds to \\(658\\)."
+  ],
+  "generalization": "When payments are made at different times, choose a comparison date and move every cash flow to that date. With a nominal annual interest rate compounded quarterly, the effective quarterly rate is the nominal rate divided by \\(4\\).",
+  "answer_text": "The final payment is approximately \\(\\boxed{658}\\), so the correct choice is B."
+},
+  {
+  "id": 69,
+  "topic": "equations of value and force of interest",
+  "title": "Exercise 69",
+  "statement": "[SOA 86; SOA-IT.105] A bank agrees to lend \\(10{,}000\\) now and \\(X\\) three years from now in exchange for a single repayment of \\(75{,}000\\) at the end of \\(10\\) years. The bank charges interest at an annual effective rate of \\(6\\%\\) for the first \\(5\\) years and at a force of interest \\(\\delta_t=\\dfrac{1}{t+1}\\), for \\(t\\geq 5\\). Calculate \\(X\\).",
+  "choices": [
+    "\\(23{,}500\\)",
+    "\\(24{,}000\\)",
+    "\\(24{,}500\\)",
+    "\\(25{,}000\\)",
+    "\\(25{,}500\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "For \\(t\\geq 5\\), the force of interest is \\(\\delta_t=\\dfrac{1}{t+1}\\).",
+    "This corresponds to the accumulation function \\(a(t)=1+t\\), since \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{1}{1+t}\\).",
+    "Set up an equation of value at time \\(0\\).",
+    "The amount \\(10{,}000\\) is already at time \\(0\\).",
+    "The amount \\(X\\), lent at time \\(3\\), has present value \\(Xv_{0.06}^3\\), where \\(v_{0.06}=\\dfrac{1}{1.06}\\).",
+    "The repayment of \\(75{,}000\\) occurs at time \\(10\\). First discount it from time \\(10\\) to time \\(5\\) using \\(\\dfrac{a(5)}{a(10)}\\).",
+    "Since \\(a(t)=1+t\\), we have \\(a(5)=6\\) and \\(a(10)=11\\).",
+    "Thus, \\(\\dfrac{a(5)}{a(10)}=\\dfrac{6}{11}\\).",
+    "Then discount from time \\(5\\) to time \\(0\\) using \\(v_{0.06}^5\\).",
+    "Therefore, the present value of the repayment is \\(75{,}000\\left(\\dfrac{6}{11}\\right)v_{0.06}^5\\).",
+    "The equation of value at time \\(0\\) is \\(10{,}000+Xv_{0.06}^3=75{,}000\\left(\\dfrac{6}{11}\\right)v_{0.06}^5\\).",
+    "Solving for \\(X\\), we get \\(X=\\dfrac{75{,}000\\left(\\frac{6}{11}\\right)v_{0.06}^5-10{,}000}{v_{0.06}^3}\\).",
+    "Substituting \\(v_{0.06}=\\dfrac{1}{1.06}\\), we get \\(X=24{,}498.79\\).",
+    "Therefore, \\(X\\approx 24{,}500\\)."
+  ],
+  "generalization": "When interest rules change over time, split the timeline into intervals. For constant effective interest, use powers of \\(1+i\\) or \\(v\\). For a force of interest, use the accumulation function ratio \\(\\dfrac{a(t_1)}{a(t_2)}\\) to discount from \\(t_2\\) to \\(t_1\\).",
+  "answer_text": "The value of \\(X\\) is approximately \\(\\boxed{24{,}500}\\), so the correct choice is C."
+},
+  {
+  "id": 70,
+  "topic": "equations of value and unknown time",
+  "title": "Exercise 70",
+  "statement": "A loan of \\(74.93\\) is to be repaid in two installments of \\(50\\) each. The effective annual rate of interest is \\(3\\%\\). The first installment is due in \\(6\\) years. In how many years is the second installment due?",
+  "choices": [
+    "\\(10\\)",
+    "\\(12\\)",
+    "\\(14\\)",
+    "\\(16\\)",
+    "\\(18\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Let \\(v_{0.03}=\\dfrac{1}{1.03}\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "The present value of the first installment is \\(50v_{0.03}^6\\).",
+    "The present value of the second installment is \\(50v_{0.03}^t\\).",
+    "The equation of value is \\(74.93=50v_{0.03}^6+50v_{0.03}^t\\).",
+    "Solve for the unknown term: \\(50v_{0.03}^t=74.93-50v_{0.03}^6\\).",
+    "Thus, \\(v_{0.03}^t=\\dfrac{74.93-50v_{0.03}^6}{50}\\).",
+    "Substitute \\(v_{0.03}=1.03^{-1}\\): \\(v_{0.03}^t=\\dfrac{74.93-50(1.03)^{-6}}{50}\\).",
+    "This gives \\(v_{0.03}^t=0.661157\\).",
+    "Taking natural logarithms gives \\(t\\ln(v_{0.03})=\\ln(0.661157)\\).",
+    "Therefore, \\(t=\\dfrac{\\ln(0.661157)}{\\ln(v_{0.03})}\\).",
+    "Since \\(v_{0.03}=1.03^{-1}\\), \\(t=\\dfrac{\\ln(0.661157)}{\\ln(1.03^{-1})}=14\\)."
+  ],
+  "generalization": "When the unknown is the time of a payment, write an equation of value and isolate the discount or accumulation factor containing the unknown time. Then use logarithms to solve for the time.",
+  "answer_text": "The second installment is due in \\(\\boxed{14}\\) years, so the correct choice is C."
+},
+  {
+  "id": 71,
+  "topic": "unknown time and force of interest",
+  "title": "Exercise 71",
+  "statement": "Fund \\(A\\) accumulates at a nominal annual rate of \\(12\\%\\), convertible monthly. Fund \\(B\\) accumulates with a force of interest \\(\\delta_t=\\dfrac{t}{6}\\), for all \\(t\\). At time \\(t=0\\), \\(1\\) is deposited in each fund. Let \\(T>0\\) be the time at which the two funds are equal. Determine \\(T\\).",
+  "choices": [
+    "\\(1.25\\)",
+    "\\(1.36\\)",
+    "\\(1.43\\)",
+    "\\(1.50\\)",
+    "\\(1.62\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "For Fund \\(A\\), the nominal annual rate is \\(12\\%\\), convertible monthly.",
+    "Therefore, the effective monthly interest rate is \\(\\dfrac{0.12}{12}=0.01\\).",
+    "Since there are \\(12t\\) months in \\(t\\) years, Fund \\(A\\)'s accumulation function is \\(a_A(t)=(1.01)^{12t}\\).",
+    "For Fund \\(B\\), the force of interest is \\(\\delta_t=\\dfrac{t}{6}\\).",
+    "Thus, Fund \\(B\\)'s accumulation function is \\(a_B(t)=\\exp\\left(\\int_0^t \\dfrac{s}{6}\\,ds\\right)\\).",
+    "Compute the integral: \\(\\int_0^t \\dfrac{s}{6}\\,ds=\\left[\\dfrac{s^2}{12}\\right]_0^t=\\dfrac{t^2}{12}\\).",
+    "Therefore, \\(a_B(t)=\\exp\\left(\\dfrac{t^2}{12}\\right)\\).",
+    "The two funds are equal at time \\(T\\), so \\(a_A(T)=a_B(T)\\).",
+    "Hence, \\((1.01)^{12T}=\\exp\\left(\\dfrac{T^2}{12}\\right)\\).",
+    "Take natural logarithms: \\(12T\\ln(1.01)=\\dfrac{T^2}{12}\\).",
+    "Since \\(T>0\\), divide both sides by \\(T\\).",
+    "This gives \\(12\\ln(1.01)=\\dfrac{T}{12}\\).",
+    "Therefore, \\(T=144\\ln(1.01)=1.4328\\)."
+  ],
+  "generalization": "When comparing two funds, write the accumulation function for each fund and set them equal at the unknown time. If the unknown time appears in an exponent, logarithms are usually needed.",
+  "answer_text": "The two funds are equal at approximately \\(\\boxed{T=1.43}\\), so the correct choice is C."
+},
+  {
+  "id": 72,
+  "topic": "equations of value and unknown time",
+  "title": "Exercise 72",
+  "statement": "The present value of a payment of \\(1004\\) at the end of \\(T\\) months is equal to the present value of \\(314\\) after \\(1\\) month, \\(271\\) after \\(18\\) months, and \\(419\\) after \\(24\\) months. The effective annual interest rate is \\(5\\%\\). Calculate \\(T\\).",
+  "choices": [
+    "\\(14\\)",
+    "\\(15\\)",
+    "\\(16\\)",
+    "\\(17\\)",
+    "\\(18\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(v_{0.05}=\\dfrac{1}{1.05}\\).",
+    "Since the interest rate is annual effective, a payment due after \\(m\\) months is discounted by \\(v_{0.05}^{m/12}\\).",
+    "The present value of the payment \\(1004\\) at time \\(T\\) months is \\(1004v_{0.05}^{T/12}\\).",
+    "The present value of the other payments is \\(314v_{0.05}^{1/12}+271v_{0.05}^{18/12}+419v_{0.05}^{24/12}\\).",
+    "Set the present values equal: \\(1004v_{0.05}^{T/12}=314v_{0.05}^{1/12}+271v_{0.05}^{18/12}+419v_{0.05}^{24/12}\\).",
+    "Divide both sides by \\(1004\\): \\(v_{0.05}^{T/12}=\\dfrac{314v_{0.05}^{1/12}+271v_{0.05}^{18/12}+419v_{0.05}^{24/12}}{1004}\\).",
+    "This gives \\(v_{0.05}^{T/12}=0.940835\\).",
+    "Taking natural logarithms gives \\(\\dfrac{T}{12}\\ln(v_{0.05})=\\ln(0.940835)\\).",
+    "Therefore, \\(T=12\\cdot \\dfrac{\\ln(0.940835)}{\\ln(v_{0.05})}\\).",
+    "Since \\(v_{0.05}=\\dfrac{1}{1.05}\\), we get \\(T=14.99\\).",
+    "Thus, \\(T\\approx 15\\)."
+  ],
+  "generalization": "When the unknown is a payment time measured in months, convert the time into years before applying an annual effective interest rate. If the annual discount factor is \\(v\\), then a payment due after \\(m\\) months has present value \\(Cv^{m/12}\\).",
+  "answer_text": "The value of \\(T\\) is approximately \\(\\boxed{15}\\), so the correct choice is B."
+},
+  {
+  "id": 73,
+  "topic": "equations of value and unknown time",
+  "title": "Exercise 73",
+  "statement": "A loan of \\(7{,}493\\) will be repaid in two installments of \\(5{,}000\\) each. The second installment is due in \\(14\\) years. If the annual effective rate of interest is \\(3\\%\\), when is the first installment due?",
+  "choices": [
+    "Less than \\(5.5\\) years",
+    "At least \\(5.5\\) years, but less than \\(6.5\\) years",
+    "At least \\(6.5\\) years, but less than \\(7.5\\) years",
+    "At least \\(7.5\\) years, but less than \\(8.5\\) years",
+    "At least \\(8.5\\) years"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(v_{0.03}=\\dfrac{1}{1.03}\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "Let \\(x\\) be the time at which the first installment is due.",
+    "The present value of the second installment is \\(5{,}000v_{0.03}^{14}\\).",
+    "The present value of the first installment is \\(5{,}000v_{0.03}^{x}\\).",
+    "The equation of value is \\(7{,}493=5{,}000v_{0.03}^{14}+5{,}000v_{0.03}^{x}\\).",
+    "Since \\(v_{0.03}=(1.03)^{-1}\\), rewrite the equation as \\(7{,}493=5{,}000(1.03)^{-14}+5{,}000(1.03)^{-x}\\).",
+    "Subtract the present value of the second installment: \\(7{,}493-5{,}000(1.03)^{-14}=5{,}000(1.03)^{-x}\\).",
+    "Numerically, this gives \\(4{,}187.411=5{,}000(1.03)^{-x}\\).",
+    "Divide by \\(5{,}000\\): \\((1.03)^{-x}=0.837482\\).",
+    "Taking natural logarithms gives \\(-x\\ln(1.03)=\\ln(0.837482)\\).",
+    "Therefore, \\(x=-\\dfrac{\\ln(0.837482)}{\\ln(1.03)}=6\\)."
+  ],
+  "generalization": "When one payment time is unknown, write an equation of value, isolate the term containing the unknown exponent, and use logarithms to solve for the time.",
+  "answer_text": "The first installment is due in \\(\\boxed{6}\\) years, so the correct choice is B."
+},
+  {
+  "id": 74,
+  "topic": "equations of value and unknown time",
+  "title": "Exercise 74",
+  "statement": "Jim borrows \\(5{,}000\\) from a bank now, an additional \\(3{,}000\\) one year from now, and an additional \\(2{,}000\\) five years from now. At what point in time \\(t\\) would a single payment of \\(10{,}000\\) be equivalent at a nominal rate of interest of \\(12\\%\\) convertible monthly?",
+  "choices": [
+    "Less than \\(0.9\\) years",
+    "At least \\(0.9\\) years, but less than \\(1.0\\) years",
+    "At least \\(1.0\\) years, but less than \\(1.1\\) years",
+    "At least \\(1.1\\) years, but less than \\(1.2\\) years",
+    "At least \\(1.2\\) years"
+  ],
+  "correct": 3,
+  "solution_steps": [
+    "The nominal annual interest rate is \\(12\\%\\), convertible monthly.",
+    "Therefore, the effective monthly interest rate is \\(\\dfrac{0.12}{12}=0.01\\).",
+    "Let \\(v_{0.01}=\\dfrac{1}{1.01}\\) be the monthly discount factor.",
+    "Choose time \\(0\\) as the comparison date.",
+    "The present value of the three amounts borrowed is \\(5{,}000+3{,}000v_{0.01}^{12}+2{,}000v_{0.01}^{60}\\).",
+    "The present value of a single payment of \\(10{,}000\\) at time \\(t\\) years is \\(10{,}000v_{0.01}^{12t}\\).",
+    "Set the present values equal: \\(10{,}000v_{0.01}^{12t}=5{,}000+3{,}000v_{0.01}^{12}+2{,}000v_{0.01}^{60}\\).",
+    "Divide both sides by \\(10{,}000\\): \\(v_{0.01}^{12t}=\\dfrac{5{,}000+3{,}000v_{0.01}^{12}+2{,}000v_{0.01}^{60}}{10{,}000}\\).",
+    "Substituting \\(v_{0.01}=\\dfrac{1}{1.01}\\), we get \\(v_{0.01}^{12t}=0.87632469\\).",
+    "Taking natural logarithms gives \\(12t\\ln(v_{0.01})=\\ln(0.87632469)\\).",
+    "Solving for \\(t\\), we get \\(t=\\dfrac{\\ln(0.87632469)}{12\\ln(v_{0.01})}\\).",
+    "Since \\(v_{0.01}=\\dfrac{1}{1.01}\\), we obtain \\(t=1.1056\\)."
+  ],
+  "generalization": "When the unknown is the time of an equivalent single payment, write an equation of value at a common comparison date. If the nominal rate is convertible monthly, convert time in years into months by using \\(12t\\) monthly periods.",
+  "answer_text": "The equivalent payment time is \\(\\boxed{1.1056}\\) years, so the correct choice is D."
+},
+  {
+  "id": 75,
+  "topic": "equations of value and unknown time",
+  "title": "Exercise 75",
+  "statement": "John is \\(30\\) years old. He will receive two payments of \\(2{,}500\\) each. The first payment will be an unknown number of years in the future. The second payment will be five years after the first payment. At an annual effective interest rate of \\(5\\%\\), the present value of the two payments is \\(2{,}607\\). Determine at which age John will receive the second payment.",
+  "choices": [
+    "Less than \\(40\\)",
+    "At least \\(40\\), but less than \\(45\\)",
+    "At least \\(45\\), but less than \\(50\\)",
+    "At least \\(50\\), but less than \\(55\\)",
+    "At least \\(55\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Let \\(t\\) be the number of years from today until the first payment.",
+    "Then the second payment is received at time \\(t+5\\).",
+    "Since John is currently \\(30\\) years old, his age when he receives the second payment will be \\(30+t+5=35+t\\).",
+    "Let \\(v_{0.05}=\\dfrac{1}{1.05}\\).",
+    "The present value of the first payment is \\(2{,}500v_{0.05}^{t}\\).",
+    "The present value of the second payment is \\(2{,}500v_{0.05}^{t+5}\\).",
+    "The equation of value is \\(2{,}500v_{0.05}^{t}+2{,}500v_{0.05}^{t+5}=2{,}607\\).",
+    "Factor out \\(2{,}500v_{0.05}^{t}\\): \\(2{,}500v_{0.05}^{t}\\left(1+v_{0.05}^{5}\\right)=2{,}607\\).",
+    "Thus, \\(v_{0.05}^{t}=\\dfrac{2{,}607}{2{,}500\\left(1+v_{0.05}^{5}\\right)}\\).",
+    "Substituting \\(v_{0.05}=\\dfrac{1}{1.05}\\), we get \\(v_{0.05}^{t}=0.5847\\).",
+    "Taking natural logarithms gives \\(t\\ln(v_{0.05})=\\ln(0.5847)\\).",
+    "Therefore, \\(t=\\dfrac{\\ln(0.5847)}{\\ln(v_{0.05})}\\).",
+    "Hence, \\(t\\approx 11\\).",
+    "The second payment is received \\(t+5\\approx 16\\) years from today.",
+    "Since John is currently \\(30\\), his age at the second payment is \\(30+16=46\\)."
+  ],
+  "generalization": "When payments are separated by a fixed number of years, define the first unknown payment time as \\(t\\), then express the later payment time relative to it. Factor the common discount term to simplify the equation of value.",
+  "answer_text": "John will receive the second payment at approximately age \\(\\boxed{46}\\), so the correct choice is C."
+},
+  {
+  "id": 76,
+  "topic": "unknown rate of interest and force of interest",
+  "title": "Exercise 76",
+  "statement": "At a constant force of interest \\(\\delta\\), the present value of \\(500\\) in \\(3.25\\) years is \\(400\\). Determine \\(\\delta\\).",
+  "choices": [
+    "\\(0.05866\\)",
+    "\\(0.06366\\)",
+    "\\(0.06866\\)",
+    "\\(0.07366\\)",
+    "\\(0.07866\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Under a constant force of interest \\(\\delta\\), the present value of a payment \\(F\\) due at time \\(t\\) is \\(PV=Fe^{-\\delta t}\\).",
+    "Here, \\(PV=400\\), \\(F=500\\), and \\(t=3.25\\).",
+    "Set up the equation: \\(500e^{-3.25\\delta}=400\\).",
+    "Divide both sides by \\(500\\): \\(e^{-3.25\\delta}=0.8\\).",
+    "Take natural logarithms: \\(-3.25\\delta=\\ln(0.8)\\).",
+    "Solve for \\(\\delta\\): \\(\\delta=-\\dfrac{\\ln(0.8)}{3.25}\\).",
+    "Therefore, \\(\\delta=0.06866\\).",
+    "Alternatively, using a financial calculator with \\(N=3.25\\), \\(PV=-400\\), \\(PMT=0\\), and \\(FV=500\\), we get \\(i=0.0710715\\).",
+    "Convert the annual effective rate to a constant force of interest: \\(\\delta=\\ln(1+i)=\\ln(1.0710715)=0.06866\\)."
+  ],
+  "generalization": "For a constant force of interest \\(\\delta\\), accumulation is given by \\(e^{\\delta t}\\) and discounting is given by \\(e^{-\\delta t}\\). If the present value and future value are known, solve \\(PV=FVe^{-\\delta t}\\) for \\(\\delta\\) using logarithms.",
+  "answer_text": "The constant force of interest is \\(\\boxed{0.06866}\\), so the correct choice is C."
+},
+  {
+  "id": 77,
+  "topic": "unknown rate of interest and equations of value",
+  "title": "Exercise 77",
+  "statement": "David can receive one of the following two payment streams: (i) \\(100\\) at time \\(0\\), \\(200\\) at time \\(n\\), and \\(300\\) at time \\(2n\\); (ii) \\(600\\) at time \\(10\\). At an annual effective interest rate of \\(i\\), the present values of the two streams are equal. Given \\(v^n=0.75941\\), determine \\(i\\).",
+  "choices": [
+    "\\(0.02511\\)",
+    "\\(0.03011\\)",
+    "\\(0.03511\\)",
+    "\\(0.04011\\)",
+    "\\(0.04511\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Let \\(v=\\dfrac{1}{1+i}\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "The present value of the first stream is \\(100+200v^n+300v^{2n}\\).",
+    "The present value of the second stream is \\(600v^{10}\\).",
+    "Since the present values are equal, \\(600v^{10}=100+200v^n+300v^{2n}\\).",
+    "We are given \\(v^n=0.75941\\).",
+    "Therefore, \\(v^{2n}=(v^n)^2=(0.75941)^2\\).",
+    "Substitute into the equation: \\(600v^{10}=100+200(0.75941)+300(0.75941)^2\\).",
+    "Thus, \\(v^{10}=\\dfrac{100+200(0.75941)+300(0.75941)^2}{600}\\).",
+    "This gives \\(v^{10}=0.708155107\\).",
+    "Taking the tenth root, \\(v=(0.708155107)^{1/10}\\).",
+    "Since \\(v=\\dfrac{1}{1+i}\\), we get \\(i=\\dfrac{1}{(0.708155107)^{1/10}}-1\\).",
+    "Therefore, \\(i=0.03511\\)."
+  ],
+  "generalization": "When an equation of value contains powers such as \\(v^n\\) and \\(v^{2n}\\), use the given value of \\(v^n\\) to simplify the equation before solving for the rate.",
+  "answer_text": "The annual effective interest rate is \\(\\boxed{0.03511}\\), so the correct choice is C."
+},
+  {
+  "id": 78,
+  "topic": "unknown rate of interest and equations of value",
+  "title": "Exercise 78",
+  "statement": "Mike receives cash flows of \\(100\\) today, \\(200\\) in one year, and \\(100\\) in two years. The present value of these cash flows is \\(364.46\\) at an annual effective rate of interest \\(i\\). Calculate \\(i\\).",
+  "choices": [
+    "\\(0.06\\)",
+    "\\(0.08\\)",
+    "\\(0.10\\)",
+    "\\(0.12\\)",
+    "\\(0.14\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "Let \\(v=\\dfrac{1}{1+i}\\).",
+    "Choose time \\(0\\) as the comparison date.",
+    "The present value equation is \\(364.46=100+200v+100v^2\\).",
+    "Rearrange the equation: \\(100v^2+200v-264.46=0\\).",
+    "Use the quadratic formula: \\(v=\\dfrac{-200\\pm\\sqrt{200^2-4(100)(-264.46)}}{2(100)}\\).",
+    "This gives \\(v=0.909085\\) or a negative value.",
+    "Since \\(v\\) must be positive, keep \\(v=0.909085\\).",
+    "Since \\(v=\\dfrac{1}{1+i}\\), we have \\(1+i=\\dfrac{1}{v}\\).",
+    "Thus, \\(i=\\dfrac{1}{0.909085}-1\\).",
+    "Therefore, \\(i=0.10\\).",
+    "Alternatively, using the cash flow function, subtract the time-0 cash flow from the present value: \\(364.46-100=264.46\\).",
+    "Using one valid sign convention, enter \\(CF_0=-264.46\\), \\(C01=200\\), \\(F01=1\\), \\(C02=100\\), and \\(F02=1\\).",
+    "The cash flow function gives \\(IRR=10\\%\\)."
+  ],
+  "generalization": "When the unknown is the interest rate, write an equation of value in terms of the discount factor \\(v=\\dfrac{1}{1+i}\\). If the equation is quadratic in \\(v\\), solve using the quadratic formula and reject any negative discount factor.",
+  "answer_text": "The annual effective interest rate is \\(\\boxed{0.10}\\), so the correct choice is C."
+},
+  {
+  "id": 79,
+  "topic": "unknown rate of interest and outstanding balance",
+  "title": "Exercise 79",
+  "statement": "John borrows \\(1{,}000\\) from Jane at an annual effective rate of interest \\(i\\). He agrees to pay back \\(1{,}000\\) after six years and \\(1{,}366.87\\) after another six years. Three years after his first payment, John repays the outstanding balance. What is the amount of John's second payment?",
+  "choices": [
+    "\\(1{,}020\\)",
+    "\\(1{,}027\\)",
+    "\\(1{,}048\\)",
+    "\\(1{,}073\\)",
+    "\\(1{,}094\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(v=\\dfrac{1}{1+i}\\).",
+    "Under the original repayment plan, John pays \\(1{,}000\\) at time \\(6\\) and \\(1{,}366.87\\) at time \\(12\\).",
+    "Use the original repayment plan to find the interest rate.",
+    "The equation of value at time \\(0\\) is \\(1{,}000=1{,}000v^6+1{,}366.87v^{12}\\).",
+    "Rearrange: \\(1{,}366.87v^{12}+1{,}000v^6-1{,}000=0\\).",
+    "Let \\(x=v^6\\). Then \\(v^{12}=x^2\\).",
+    "The equation becomes \\(1{,}366.87x^2+1{,}000x-1{,}000=0\\).",
+    "Using the quadratic formula gives a positive solution \\(x=0.56447\\).",
+    "Thus, \\(v^6=0.56447\\), which gives \\(i=0.10\\).",
+    "John makes his first payment at time \\(6\\), then repays the outstanding balance three years later, at time \\(9\\).",
+    "At time \\(9\\), the only remaining scheduled payment is \\(1{,}366.87\\) due at time \\(12\\).",
+    "Therefore, the outstanding balance at time \\(9\\) is \\(X=1{,}366.87v^3\\).",
+    "Since \\(i=0.10\\), \\(v=\\dfrac{1}{1.10}\\).",
+    "Thus, \\(X=1{,}366.87(1.10)^{-3}=1{,}026.95\\).",
+    "Therefore, John's second payment is approximately \\(1{,}027\\)."
+  ],
+  "generalization": "To find an outstanding balance at a given time, take the value at that time of the remaining scheduled payments. If the interest rate is not given directly, first use the original equation of value to solve for the rate.",
+  "answer_text": "John's second payment is approximately \\(\\boxed{1{,}027}\\), so the correct choice is B."
+},
+  {
+  "id": 80,
+  "topic": "unknown rate of interest and equations of value",
+  "title": "Exercise 80",
+  "statement": "At an annual effective interest rate \\(i\\), with \\(i>0\\), the following are all equal: (i) the present value of \\(10{,}000\\) at the end of \\(6\\) years; (ii) the sum of the present values of \\(6{,}000\\) at the end of year \\(t\\) and \\(56{,}000\\) at the end of year \\(2t\\); (iii) \\(5{,}000\\) immediately. Calculate the present value of a payment of \\(8{,}000\\) at the end of year \\(t+3\\), using the same annual effective interest rate.",
+  "choices": [
+    "\\(1{,}330\\)",
+    "\\(1{,}415\\)",
+    "\\(1{,}600\\)",
+    "\\(1{,}775\\)",
+    "\\(2{,}000\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(v=\\dfrac{1}{1+i}\\).",
+    "Since the present value of \\(10{,}000\\) at the end of \\(6\\) years is equal to \\(5{,}000\\) immediately, we have \\(10{,}000v^6=5{,}000\\).",
+    "Thus, \\(v^6=\\dfrac{1}{2}\\).",
+    "Therefore, \\(v^3=\\sqrt{\\dfrac{1}{2}}=\\dfrac{1}{\\sqrt{2}}\\).",
+    "Equivalently, the interest rate is \\(i=2^{1/6}-1=0.122462\\).",
+    "Now use the equality between the second payment stream and \\(5{,}000\\) immediately: \\(5{,}000=6{,}000v^t+56{,}000v^{2t}\\).",
+    "Let \\(x=v^t\\). Then \\(v^{2t}=x^2\\).",
+    "The equation becomes \\(5{,}000=6{,}000x+56{,}000x^2\\).",
+    "Divide by \\(1{,}000\\): \\(5=6x+56x^2\\).",
+    "Rearrange: \\(56x^2+6x-5=0\\).",
+    "Using the quadratic formula, \\(x=\\dfrac{-6\\pm\\sqrt{6^2-4(56)(-5)}}{2(56)}\\).",
+    "This gives \\(x=\\dfrac{-6+34}{112}=\\dfrac{28}{112}=\\dfrac{1}{4}\\), discarding the negative solution.",
+    "Therefore, \\(v^t=\\dfrac{1}{4}\\).",
+    "The present value of \\(8{,}000\\) at time \\(t+3\\) is \\(8{,}000v^{t+3}\\).",
+    "Rewrite this as \\(8{,}000v^tv^3\\).",
+    "Substitute \\(v^t=\\dfrac{1}{4}\\) and \\(v^3=\\dfrac{1}{\\sqrt{2}}\\).",
+    "Thus, \\(8{,}000v^{t+3}=8{,}000\\left(\\dfrac{1}{4}\\right)\\left(\\dfrac{1}{\\sqrt{2}}\\right)=1{,}414.21\\)."
+  ],
+  "generalization": "When several present values are known to be equal, use the simplest equality first to obtain information about the discount factor. Then use another equality to solve for expressions such as \\(v^t\\), without necessarily needing to solve directly for \\(t\\).",
+  "answer_text": "The present value is approximately \\(\\boxed{1{,}415}\\), so the correct choice is B."
+},
+  {
+  "id": 81,
+  "topic": "unknown rate of interest and force of interest",
+  "title": "Exercise 81",
+  "statement": "At time \\(t=0\\), Donald puts \\(1{,}000\\) into a fund crediting interest at a nominal annual rate of \\(i\\), compounded semiannually. At time \\(t=2\\), Lewis puts \\(1{,}000\\) into a different fund crediting interest at a force of interest \\(\\delta_t=\\dfrac{1}{5+t}\\), for all \\(t\\). At time \\(t=16\\), the amounts in each fund will be equal. Calculate \\(i\\).",
+  "choices": [
+    "\\(6.9\\%\\)",
+    "\\(7.0\\%\\)",
+    "\\(7.1\\%\\)",
+    "\\(7.2\\%\\)",
+    "\\(7.3\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "For Lewis, identify the accumulation function from the force of interest.",
+    "Since \\(\\delta_t=\\dfrac{1}{5+t}\\), we can write \\(\\delta_t=\\dfrac{\\frac{1}{5}}{1+\\frac{t}{5}}\\).",
+    "Thus, an accumulation function is \\(a(t)=1+\\dfrac{t}{5}\\).",
+    "Indeed, \\(\\dfrac{a'(t)}{a(t)}=\\dfrac{\\frac{1}{5}}{1+\\frac{t}{5}}=\\dfrac{1}{5+t}=\\delta_t\\).",
+    "Donald accumulates from time \\(0\\) to time \\(16\\). Since his nominal annual rate is \\(i\\), compounded semiannually, the effective semiannual rate is \\(\\dfrac{i}{2}\\).",
+    "There are \\(16\\cdot 2=32\\) semiannual periods.",
+    "Therefore, Donald's accumulated value at time \\(16\\) is \\(1{,}000\\left(1+\\dfrac{i}{2}\\right)^{32}\\).",
+    "Lewis accumulates from time \\(2\\) to time \\(16\\). His accumulation factor is \\(\\dfrac{a(16)}{a(2)}\\).",
+    "Compute \\(a(16)=1+\\dfrac{16}{5}=4.2\\).",
+    "Compute \\(a(2)=1+\\dfrac{2}{5}=1.4\\).",
+    "Thus, \\(\\dfrac{a(16)}{a(2)}=\\dfrac{4.2}{1.4}=3\\).",
+    "Since the two funds are equal at time \\(16\\), set \\(1{,}000\\left(1+\\dfrac{i}{2}\\right)^{32}=1{,}000\\cdot 3\\).",
+    "Cancel \\(1{,}000\\): \\(\\left(1+\\dfrac{i}{2}\\right)^{32}=3\\).",
+    "Taking the \\(32\\)nd root gives \\(1+\\dfrac{i}{2}=3^{1/32}\\).",
+    "Therefore, \\(i=2\\left(3^{1/32}-1\\right)\\).",
+    "Thus, \\(i=0.06986\\), or approximately \\(7.0\\%\\)."
+  ],
+  "generalization": "When comparing two funds at a common future date, write the accumulated value of each fund at that date. For a force of interest, either integrate the force over the relevant interval or identify the accumulation function and use the ratio \\(\\dfrac{a(t_2)}{a(t_1)}\\).",
+  "answer_text": "The nominal annual rate compounded semiannually is approximately \\(\\boxed{7.0\\%}\\), so the correct choice is B."
+},
+  {
+  "id": 82,
+  "topic": "annuities-immediate and present value",
+  "title": "Exercise 82",
+  "statement": "A payment of \\(1\\) is to be made each year for \\(22\\) years. The effective annual rate of interest is \\(8.25\\%\\). If the first payment is one year from now, the present value of these payments is \\(10\\). Calculate the present value if the first payment is \\(22\\) years from now.",
+  "choices": [
+    "\\(1.69\\)",
+    "\\(1.79\\)",
+    "\\(1.89\\)",
+    "\\(1.99\\)",
+    "\\(2.09\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "If the first payment is one year from now, then the payments occur at times \\(1,2,\\ldots,22\\).",
+    "We are given that the present value of this annuity-immediate is \\(\\annimm{22}=10\\).",
+    "If the first payment is \\(22\\) years from now, then the payments occur at times \\(22,23,\\ldots,43\\).",
+    "This is still a 22-payment annuity-immediate, but \\(\\annimm{22}\\) is measured one period before the first payment.",
+    "Since the first payment is at time \\(22\\), the value \\(\\annimm{22}=10\\) is measured at time \\(21\\).",
+    "To find the present value at time \\(0\\), discount this value by \\(21\\) years.",
+    "Thus, \\(PV=10v^{21}\\).",
+    "Since \\(i=0.0825\\), we have \\(v=\\dfrac{1}{1.0825}\\).",
+    "Therefore, \\(PV=10(1.0825)^{-21}\\).",
+    "This gives \\(PV=1.89\\)."
+  ],
+  "generalization": "The value \\(\\annimm{n}\\) is measured one period before the first payment. If the first payment is delayed, first locate the time at which the annuity value is measured, then discount that value back to the present.",
+  "answer_text": "The present value is \\(\\boxed{1.89}\\), so the correct choice is C."
+},
+  {
+  "id": 83,
+  "topic": "annuities-immediate and present value",
+  "title": "Exercise 83",
+  "statement": "John invests \\(100{,}000\\) into a fund earning an annual effective interest rate of \\(4\\%\\). John will make withdrawals of \\(X\\) at the end of every \\(5\\) years for a total of \\(10\\) withdrawals. After the last withdrawal, the fund's balance will be \\(0\\). Calculate \\(X\\).",
+  "choices": [
+    "\\(23{,}213.09\\)",
+    "\\(24{,}213.09\\)",
+    "\\(25{,}213.09\\)",
+    "\\(26{,}213.09\\)",
+    "\\(27{,}213.09\\)"
+  ],
+  "correct": 2,
+  "solution_steps": [
+    "The withdrawals are made every \\(5\\) years, so we use the effective interest rate per \\(5\\)-year period.",
+    "Let \\(j\\) be the effective rate per \\(5\\) years.",
+    "Since the annual effective interest rate is \\(4\\%\\), we have \\(1+j=(1.04)^5\\).",
+    "Thus, \\(j=(1.04)^5-1=0.216652902\\).",
+    "The withdrawals form an annuity-immediate with \\(10\\) payments of \\(X\\), where each payment period is \\(5\\) years.",
+    "Therefore, the present value of the withdrawals is \\(X\\annimm{10}_{j}\\).",
+    "The equation of value at time \\(0\\) is \\(100{,}000=X\\annimm{10}_{j}\\).",
+    "Using \\(\\annimm{10}_{j}=\\dfrac{1-v_j^{10}}{j}\\), where \\(v_j=\\dfrac{1}{1+j}\\), we get \\(100{,}000=X\\left(\\dfrac{1-v_j^{10}}{j}\\right)\\).",
+    "Substitute \\(j=0.216652902\\): \\(100{,}000=X\\left(\\dfrac{1-(1.216652902)^{-10}}{0.216652902}\\right)\\).",
+    "Solving for \\(X\\), we get \\(X=25{,}213.09\\)."
+  ],
+  "generalization": "When annuity payments are made every \\(k\\) years, convert the annual effective interest rate into an effective rate per \\(k\\)-year payment period before using the annuity formula.",
+  "answer_text": "The withdrawal amount is \\(\\boxed{25{,}213.09}\\), so the correct choice is C."
+},
+  {
+  "id": 84,
+  "topic": "annuities-immediate and present value",
+  "title": "Exercise 84",
+  "statement": "A 20-year annuity pays \\(100\\) every other year beginning at the end of the second year, with additional payments of \\(300\\) each at the ends of years \\(3\\), \\(9\\), and \\(15\\). The effective annual interest rate is \\(4\\%\\). Calculate the present value of the annuity.",
+  "choices": [
+    "\\(1{,}310\\)",
+    "\\(1{,}340\\)",
+    "\\(1{,}370\\)",
+    "\\(1{,}400\\)",
+    "\\(1{,}430\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "Let \\(v_{0.04}=\\dfrac{1}{1.04}\\).",
+    "The regular payments of \\(100\\) occur every other year beginning at time \\(2\\), so they occur at times \\(2,4,6,\\ldots,20\\).",
+    "There are \\(10\\) regular payments of \\(100\\).",
+    "Since the payment period is \\(2\\) years, use the effective interest rate per \\(2\\)-year period.",
+    "Let \\(j\\) be the effective interest rate per \\(2\\) years. Then \\(1+j=(1.04)^2\\).",
+    "Thus, \\(j=(1.04)^2-1=0.0816\\).",
+    "The present value of the regular payments is \\(100\\annimm{10}_{j}\\).",
+    "The additional payments of \\(300\\) occur at times \\(3\\), \\(9\\), and \\(15\\).",
+    "Their present value is \\(300v_{0.04}^{3}+300v_{0.04}^{9}+300v_{0.04}^{15}\\).",
+    "Therefore, \\(PV=100\\annimm{10}_{j}+300v_{0.04}^{3}+300v_{0.04}^{9}+300v_{0.04}^{15}\\).",
+    "Using \\(\\annimm{10}_{j}=\\dfrac{1-v_j^{10}}{j}\\), we get \\(PV=100\\left(\\dfrac{1-(1.0816)^{-10}}{0.0816}\\right)+300(1.04)^{-3}+300(1.04)^{-9}+300(1.04)^{-15}\\).",
+    "Thus, \\(PV=1{,}310.25\\).",
+    "So the present value is approximately \\(1{,}310\\)."
+  ],
+  "generalization": "When payments occur every \\(k\\) years, convert the annual effective interest rate into an effective rate per \\(k\\)-year payment period for the annuity formula. Payments that do not fit the regular annuity pattern should be valued separately and added.",
+  "answer_text": "The present value is approximately \\(\\boxed{1{,}310}\\), so the correct choice is A."
+},
+  {
+  "id": 85,
+  "topic": "annuities-immediate and unknown time",
+  "title": "Exercise 85",
+  "statement": "On January 1, 1985, Marc has the following two options for repaying a loan: (i) sixty monthly payments of \\(100\\), commencing February 1, 1985; (ii) a single payment of \\(6{,}000\\) at the end of \\(K\\) months. Interest is at a nominal annual rate of \\(12\\%\\), compounded monthly. The two options have the same present value. Determine \\(K\\).",
+  "choices": [
+    "\\(29.0\\)",
+    "\\(29.5\\)",
+    "\\(30.0\\)",
+    "\\(30.5\\)",
+    "\\(31.0\\)"
+  ],
+  "correct": 0,
+  "solution_steps": [
+    "The nominal annual interest rate is \\(12\\%\\), compounded monthly.",
+    "Therefore, the effective monthly interest rate is \\(j=\\dfrac{0.12}{12}=0.01\\).",
+    "Let \\(v_{0.01}=\\dfrac{1}{1.01}\\).",
+    "The first option consists of \\(60\\) monthly payments of \\(100\\), beginning one month from January 1, 1985.",
+    "Therefore, its present value is \\(100\\annimm{60}_{0.01}\\).",
+    "The second option is a single payment of \\(6{,}000\\) at the end of \\(K\\) months, so its present value is \\(6{,}000v_{0.01}^{K}\\).",
+    "Since the two options have the same present value, \\(100\\annimm{60}_{0.01}=6{,}000v_{0.01}^{K}\\).",
+    "Using \\(\\annimm{60}_{0.01}=\\dfrac{1-v_{0.01}^{60}}{0.01}\\), we get \\(100\\left(\\dfrac{1-v_{0.01}^{60}}{0.01}\\right)=6{,}000v_{0.01}^{K}\\).",
+    "Thus, \\(v_{0.01}^{K}=\\dfrac{100\\left(\\frac{1-v_{0.01}^{60}}{0.01}\\right)}{6{,}000}\\).",
+    "Substituting \\(v_{0.01}=\\dfrac{1}{1.01}\\), we obtain \\(v_{0.01}^{K}=0.7492506\\).",
+    "Taking natural logarithms gives \\(K\\ln(v_{0.01})=\\ln(0.7492506)\\).",
+    "Therefore, \\(K=\\dfrac{\\ln(0.7492506)}{\\ln(v_{0.01})}\\).",
+    "Since \\(v_{0.01}=\\dfrac{1}{1.01}\\), we get \\(K=29.0123\\).",
+    "Thus, \\(K\\approx 29.0\\)."
+  ],
+  "generalization": "When payments are monthly and the interest rate is nominal convertible monthly, use the monthly effective rate directly. A single payment at the end of \\(K\\) months has present value \\(Cv^K\\), while a level monthly annuity-immediate has present value \\(R\\annimm{n}\\).",
+  "answer_text": "The value of \\(K\\) is approximately \\(\\boxed{29.0}\\), so the correct choice is A."
+},
+  {
+  "id": 86,
+  "topic": "annuities-immediate and unknown rate of interest",
+  "title": "Exercise 86",
+  "statement": "An annuity pays \\(2\\) at the end of each year for \\(18\\) years. Another annuity pays \\(2.5\\) at the end of each year for \\(9\\) years. At an effective annual interest rate of \\(i\\), where \\(0<i<1\\), the present values of both annuities are equal. Calculate \\(i\\).",
+  "choices": [
+    "\\(14\\%\\)",
+    "\\(17\\%\\)",
+    "\\(20\\%\\)",
+    "\\(23\\%\\)",
+    "\\(26\\%\\)"
+  ],
+  "correct": 1,
+  "solution_steps": [
+    "Let \\(v=\\dfrac{1}{1+i}\\).",
+    "The present value of the first annuity is \\(2\\annimm{18}\\).",
+    "The present value of the second annuity is \\(2.5\\annimm{9}\\).",
+    "Since the present values are equal, \\(2\\annimm{18}=2.5\\annimm{9}\\).",
+    "Using \\(\\annimm{n}=\\dfrac{1-v^n}{i}\\), we get \\(2\\left(\\dfrac{1-v^{18}}{i}\\right)=2.5\\left(\\dfrac{1-v^9}{i}\\right)\\).",
+    "Since \\(i>0\\), multiply both sides by \\(i\\): \\(2(1-v^{18})=2.5(1-v^9)\\).",
+    "Expand and rearrange: \\(2v^{18}-2.5v^9+0.5=0\\).",
+    "Let \\(x=v^9\\). Then \\(v^{18}=x^2\\).",
+    "The equation becomes \\(2x^2-2.5x+0.5=0\\).",
+    "Using the quadratic formula gives \\(x=1\\) or \\(x=0.25\\).",
+    "Since \\(x=v^9\\), we have \\(v^9=1\\) or \\(v^9=0.25\\).",
+    "The solution \\(v^9=1\\) implies \\(v=1\\), hence \\(i=0\\), which is not allowed because \\(0<i<1\\).",
+    "Therefore, \\(v^9=0.25\\).",
+    "Taking the ninth root gives \\(v=(0.25)^{1/9}\\).",
+    "Since \\(v=\\dfrac{1}{1+i}\\), we have \\(i=\\dfrac{1}{(0.25)^{1/9}}-1\\).",
+    "Thus, \\(i=0.16653\\), or approximately \\(16.653\\%\\).",
+    "The closest answer choice is \\(17\\%\\)."
+  ],
+  "generalization": "When two annuity present values are equal, write both values using \\(\\annimm{n}=\\dfrac{1-v^n}{i}\\). If the terms involve powers like \\(v^9\\) and \\(v^{18}\\), use a substitution such as \\(x=v^9\\) to reduce the equation to a quadratic.",
+  "answer_text": "The effective annual interest rate is approximately \\(\\boxed{16.653\\%}\\), so the correct choice is B."
+}
+]
