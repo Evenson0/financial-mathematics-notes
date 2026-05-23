@@ -4,11 +4,11 @@
 
 ## Overview
 
-This repository contains my personal study notes for the **SOA Exam FM**. The notes are designed as a growing reference in financial mathematics, with definitions, formulas, examples, exercises, and problem-solving intuition.
+This repository contains my study notes for the **SOA Exam FM**, together with a structured JSON problem bank used by my interactive FM practice tool.
 
-The material follows the main structure of the FM syllabus and is supported by a companion problem bank written in JSON. This JSON file contains a collection of **1,000 exercises** using the same format as the interactive practice tool available on my personal website.
+The notes are designed as a growing reference in financial mathematics, covering definitions, formulas, worked examples, exercises, and problem-solving intuition. The material follows the main structure of the FM syllabus and is intended to support both theoretical understanding and active exam preparation.
 
-The goal of this project is to build a clean, reusable, and well-documented resource for learning financial mathematics, preparing for Exam FM, and developing actuarial problem-solving skills.
+The companion JSON file contains **1,000 exercises** in the same format used by the practice tool on my personal website, making the problem bank reusable for interactive applications, flashcards, dashboards, or future actuarial education projects.
 
 ## Repository Contents
 
@@ -53,7 +53,7 @@ This repository also includes a structured JSON problem bank:
 data/fm_practice_problems.json
 ```
 
-The JSON file contains **1,000 financial mathematics exercises** written in the same format used by the interactive practice tool on my blog.
+The file is designed to be machine-readable and reusable across educational tools.
 
 Each problem follows a structured format similar to:
 
@@ -148,4 +148,4 @@ You can find more actuarial, mathematical, and quantitative finance resources on
 
 **Evenson Auguste**
 
-Actuarial analyst interested in actuarial science, financial mathematics, quantitative finance, probability, and mathematical education.
+P&C actuarial analyst with interests in actuarial science, financial mathematics, quantitative finance, and mathematical research and education.
